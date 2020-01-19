@@ -10,6 +10,8 @@ export class HomepageComponent implements OnInit {
  
   constructor() { }
   isChecked:boolean = false;
+  rental: Date = new Date();
+  return: Date = new Date();
   ngOnInit() {
   }
 
