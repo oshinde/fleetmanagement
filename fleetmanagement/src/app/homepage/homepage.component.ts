@@ -7,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomepageComponent implements OnInit {
 
+ 
   constructor() { }
-
+  isChecked:boolean = false;
   ngOnInit() {
   }
 
