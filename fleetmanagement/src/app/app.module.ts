@@ -12,6 +12,7 @@ import {FormsModule} from '@angular/forms';
 import { AddOnComponent } from './add-on/add-on.component';
 import { CustomerInformationComponent } from './customer-information/customer-information.component';
 import { ConfirmPageComponent } from './confirm-page/confirm-page.component';
+import { SelectLocationComponent } from './select-location/select-location.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,9 @@ import { ConfirmPageComponent } from './confirm-page/confirm-page.component';
     HeaderComponent,
     FooterComponent,
     AddOnComponent,
-    CustomerInformationComponent,ConfirmPageComponent
+    CustomerInformationComponent,
+    ConfirmPageComponent,
+     SelectLocationComponent
   ],
   imports: [
     BrowserModule,
