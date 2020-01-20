@@ -12,40 +12,6 @@
     <form>
         <div class="container">
             <div class="row">
-                <div class="col-6">
-
-                    <br>
-                    <div class="row">
-
-                        <div class="col-4">
-                            Pickup-up <input type="text" placeholder="Select Date" class="form-control" bsDatepicker>
-                        </div>
-                        <div class="col-2" style="padding-bottom:8px;">
-                            <timepicker [(ngModel)]="rental" name="Rental"></timepicker>
-                        </div>
-                    </div>
-                    Pickup-up at: <b>some address</b> <br>
-                    Vehicle Type: <b>Sedan</b>
-                </div>
-
-                <div class="col-6">
-
-                    <br>
-                    <div class="row">
-
-                        <div class="col-4">
-                            Return <input type="text" placeholder="Select Date" class="form-control" bsDatepicker>
-                        </div>
-                        <div class="col-2" style="padding-bottom:8px;">
-                            <timepicker [(ngModel)]="rental" name="Rental"></timepicker>
-                        </div>
-                    </div>
-                    Return at: <b>Return Address</b> <br>
-                    Rental Add-on: <b>Some Addons</b>
-
-                </div>
-            </div>
-            <div class="row">
 
                 <div class="col-6">
                     <br>
@@ -74,6 +40,9 @@
                     <br>
                     Passport No.
                     <input type="text" class="form-control">
+                    <br>
+                    Birth date
+                    <input type="text" placeholder="DD/MM/YYYY" class="form-control" bsDatepicker>
                     <br>
                     Contact Number
                     <input type="text" class="form-control">

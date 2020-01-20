@@ -13,6 +13,7 @@ import { AddOnComponent } from './add-on/add-on.component';
 import { CustomerInformationComponent } from './customer-information/customer-information.component';
 import { ConfirmPageComponent } from './confirm-page/confirm-page.component';
 import { SelectLocationComponent } from './select-location/select-location.component';
+import { MembershipRegistrationComponent } from './membership-registration/membership-registration.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { SelectLocationComponent } from './select-location/select-location.compo
     AddOnComponent,
     CustomerInformationComponent,
     ConfirmPageComponent,
-     SelectLocationComponent
+     SelectLocationComponent,
+     MembershipRegistrationComponent
   ],
   imports: [
     BrowserModule,
