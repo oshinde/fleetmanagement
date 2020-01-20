@@ -9,7 +9,8 @@ import { ConfirmPageComponent } from './confirm-page/confirm-page.component';
 const routes: Routes = [{path:'',component:HomepageComponent},
 {path:'customerInformation',component:CustomerInformationComponent},
 {path:'homePage',component:HomepageComponent},
-{path:'confirmBooking',component:ConfirmPageComponent}];
+{path:'confirmBooking',component:ConfirmPageComponent},
+{path:'addOn',component:AddOnComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

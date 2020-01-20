@@ -10,13 +10,16 @@ import { FooterComponent } from './footer/footer.component';
 import { TimepickerModule } from 'ngx-bootstrap/timepicker';
 import {FormsModule} from '@angular/forms';
 import { AddOnComponent } from './add-on/add-on.component';
+import { CustomerInformationComponent } from './customer-information/customer-information.component';
+import { ConfirmPageComponent } from './confirm-page/confirm-page.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
     HeaderComponent,
     FooterComponent,
-    AddOnComponent
+    AddOnComponent,
+    CustomerInformationComponent,ConfirmPageComponent
   ],
   imports: [
     BrowserModule,
