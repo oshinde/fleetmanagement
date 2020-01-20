@@ -9,12 +9,14 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { TimepickerModule } from 'ngx-bootstrap/timepicker';
 import {FormsModule} from '@angular/forms';
+import { CustomerInformationComponent } from './customer-information/customer-information.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    CustomerInformationComponent
   ],
   imports: [
     BrowserModule,
