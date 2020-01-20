@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+
+                    <br>
+                    <div class="row">
+
+                        <div class="col-4">
+                            Pickup-up <input type="text" placeholder="Select Date" class="form-control" bsDatepicker>
+                        </div>
+                        <div class="col-2" style="padding-bottom:8px;">
+                            <timepicker [(ngModel)]="rental" name="Rental"></timepicker>
+                        </div>
+                    </div>
+                    Pickup-up at: <b>some address</b> <br>
+                    Vehicle Type: <b>Sedan</b>
+                </div>
+
+                <div class="col-6">
+
+                    <br>
+                    <div class="row">
+
+                        <div class="col-4">
+                            Return <input type="text" placeholder="Select Date" class="form-control" bsDatepicker>
+                        </div>
+                        <div class="col-2" style="padding-bottom:8px;">
+                            <timepicker [(ngModel)]="rental" name="Rental"></timepicker>
+                        </div>
+                    </div>
+                    Return at: <b>Return Address</b> <br>
+                    Rental Add-on: <b>Some Addons</b>
+
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-6">
+                    <br>
+                    Name
+                    <input type="text" class="form-control">
+                    <br>
+                    Address
+                    <textarea class="form-control rounded-0" rows="3"></textarea>
+                    <br>
+                    Email
+                    <input type="text" class="form-control">
+                    <br>
+                    IDP No.
+                    <input type="text" class="form-control">
+                </div>
+                <div class="col-6">
+                    <br>
+                    City
+                    <input type="text" class="form-control">
+                    <br>
+                    Contact Number
+                    <input type="text" class="form-control">
+                    <br>
+                    <br>
+                    <br>
+                    Driving Licence
+                    <input type="text" class="form-control">
+                    <br>
+                    Passport No.
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+
+            <div style="padding-left: 250px;">
+                <br>
+                <div class="row">
+                    <div style="padding-right: 10px;">
+                        <button type="button" class="btn btn-outline-primary"
+                            style="padding:0px 80px 0px 80px">Confirm</button>
+                    </div>
+                    <div style="padding-left: 10px;">
+                        <button type="button" class="btn btn-outline-primary"
+                            style="padding:0px 80px 0px 80px">Modify</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <br>
+</body>
+
+</html>
