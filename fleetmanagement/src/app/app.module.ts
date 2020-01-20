@@ -15,11 +15,9 @@ import { ConfirmPageComponent } from './confirm-page/confirm-page.component';
 import { SelectLocationComponent } from './select-location/select-location.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { AlertModule } from 'ngx-bootstrap';
-
-
-=======
 import { MembershipRegistrationComponent } from './membership-registration/membership-registration.component';
->>>>>>> 507886bb48c1a94a8e3eac3779fb025b92e94db3
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,20 +27,10 @@ import { MembershipRegistrationComponent } from './membership-registration/membe
     AddOnComponent,
     CustomerInformationComponent,
     ConfirmPageComponent,
-<<<<<<< HEAD
-     SelectLocationComponent
-
-=======
      SelectLocationComponent,
-     MembershipRegistrationComponent
->>>>>>> 507886bb48c1a94a8e3eac3779fb025b92e94db3
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,BrowserAnimationsModule,
-    BsDatepickerModule.forRoot(),TimepickerModule.forRoot(),FormsModule,
-    ReactiveFormsModule,
-    AlertModule.forRoot()
+
+     MembershipRegistrationComponent,FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
