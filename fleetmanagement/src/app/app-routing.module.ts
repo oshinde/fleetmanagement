@@ -5,6 +5,7 @@ import { AddOnComponent } from './add-on/add-on.component';
 import { CustomerInformationComponent } from './customer-information/customer-information.component';
 import { ConfirmPageComponent } from './confirm-page/confirm-page.component';
 import { SelectLocationComponent } from './select-location/select-location.component';
+import { MembershipRegistrationComponent } from './membership-registration/membership-registration.component';
 
 
 const routes: Routes = [{path:'',component:HomepageComponent},
@@ -12,7 +13,8 @@ const routes: Routes = [{path:'',component:HomepageComponent},
 {path:'homePage',component:HomepageComponent},
 {path:'confirmBooking',component:ConfirmPageComponent},
 {path:'addOn',component:AddOnComponent},
-{path:'selectLocation',component:SelectLocationComponent}];
+{path:'selectLocation',component:SelectLocationComponent},
+{path:'membershipRegistration',component:MembershipRegistrationComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
