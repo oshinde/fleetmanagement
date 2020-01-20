@@ -13,7 +13,6 @@ import { AddOnComponent } from './add-on/add-on.component';
 import { CustomerInformationComponent } from './customer-information/customer-information.component';
 import { ConfirmPageComponent } from './confirm-page/confirm-page.component';
 import { SelectLocationComponent } from './select-location/select-location.component';
-<<<<<<< HEAD
 import {ReactiveFormsModule} from '@angular/forms';
 import { AlertModule } from 'ngx-bootstrap';
 
