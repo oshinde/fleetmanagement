@@ -4,13 +4,15 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { AddOnComponent } from './add-on/add-on.component';
 import { CustomerInformationComponent } from './customer-information/customer-information.component';
 import { ConfirmPageComponent } from './confirm-page/confirm-page.component';
+import { SelectLocationComponent } from './select-location/select-location.component';
 
 
 const routes: Routes = [{path:'',component:HomepageComponent},
 {path:'customerInformation',component:CustomerInformationComponent},
 {path:'homePage',component:HomepageComponent},
 {path:'confirmBooking',component:ConfirmPageComponent},
-{path:'addOn',component:AddOnComponent}];
+{path:'addOn',component:AddOnComponent},
+{path:'selectLocation',component:SelectLocationComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
