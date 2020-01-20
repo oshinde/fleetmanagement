@@ -13,6 +13,10 @@ import { AddOnComponent } from './add-on/add-on.component';
 import { CustomerInformationComponent } from './customer-information/customer-information.component';
 import { ConfirmPageComponent } from './confirm-page/confirm-page.component';
 import { SelectLocationComponent } from './select-location/select-location.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import { AlertModule } from 'ngx-bootstrap';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,11 +27,14 @@ import { SelectLocationComponent } from './select-location/select-location.compo
     CustomerInformationComponent,
     ConfirmPageComponent,
      SelectLocationComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,BrowserAnimationsModule,
-    BsDatepickerModule.forRoot(),TimepickerModule.forRoot(),FormsModule
+    BsDatepickerModule.forRoot(),TimepickerModule.forRoot(),FormsModule,
+    ReactiveFormsModule,
+    AlertModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

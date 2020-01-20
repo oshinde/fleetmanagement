@@ -12,7 +12,7 @@
 
 <body>
     <div class="container">
-        <form>
+        <form >
             <div class="row">
                 <div class="col-8">
                     <h4 style="color:#17a2b8;"><u>Make Reservation</u></h4>
@@ -20,13 +20,13 @@
                         <div class="col-4">
                             <p>Rental Date & Time</p>
                             <input type="text" placeholder="Select Rental Date" class="form-control" bsDatepicker>
-                            <timepicker [(ngModel)]="rental" name="Rental"></timepicker>
+                            <timepicker [(ngModel)]="rental" name="RentalDate"></timepicker>
                             <pre class="alert alert-info">Time is: {{rental}}</pre>
                         </div>
                         <div class="col-4">
                             <p>Return Date & Time</p>
                             <input type="text" placeholder="Select Return Date" class="form-control" bsDatepicker>
-                            <timepicker [(ngModel)]="return" name="Return"></timepicker>
+                            <timepicker [(ngModel)]="return" name="ReturnDate"></timepicker>
                             <pre class="alert alert-info">Time is: {{return}}</pre>
                         </div>
                     </div>
@@ -40,10 +40,10 @@
                             <p>Enter Airport Code</p>
                         </div>
                         <div class="col-3">
-                            <input type="text" class="form-control">
+                            <input type="text" name="AirportCodeRental" class="form-control">
                         </div>
-                        <div class="col-2">
-                            <h6><u>Find Airport</u></h6>
+                        <div >
+                            <button type="button" class="btn btn-outline-primary">Find Airport</button>
                         </div>
                     </div>
                     <!-- ..................... -->
@@ -55,11 +55,11 @@
 
                         <div class="col-3">
                             Enter State
-                            <input type="text" class="form-control">
+                            <input type="text" name="RentalState" class="form-control">
                         </div>
                         <div class="col-3">
                             City <br>
-                            <input type="text" class="form-control">
+                            <input type="text" name="RentalCity" class="form-control">
                         </div>
                         <div class="col-2">
                             <br>
@@ -80,10 +80,10 @@
                                 <p>Enter Airport Code</p>
                             </div>
                             <div class="col-3">
-                                <input type="text" class="form-control">
+                                <input type="text" name="AirportCodeReturn" class="form-control">
                             </div>
-                            <div class="col-2">
-                                <h6><u>Find Airport</u></h6>
+                            <div >
+                                <button type="button" class="btn btn-outline-primary">Find Airport</button>
                             </div>
                         </div>
                         <!-- ..................... -->
@@ -95,11 +95,11 @@
 
                             <div class="col-3">
                                 Enter State
-                                <input type="text" class="form-control">
+                                <input type="text" name="ReturnState" class="form-control">
                             </div>
                             <div class="col-3">
                                 City <br>
-                                <input type="text" class="form-control">
+                                <input type="text" name="ReturnCity" class="form-control">
                             </div>
                             <div class="col-2">
                                 <br>
