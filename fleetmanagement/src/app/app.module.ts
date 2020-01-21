@@ -18,6 +18,8 @@ import { MembershipRegistrationComponent } from './membership-registration/membe
 import { AlertModule } from 'ngx-bootstrap';
 import {HttpClientModule} from '@angular/common/http';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,8 +29,8 @@ import {HttpClientModule} from '@angular/common/http';
     AddOnComponent,
     CustomerInformationComponent,
     ConfirmPageComponent,
+     SelectLocationComponent,MembershipRegistrationComponent,
      SelectLocationComponent,
-     MembershipRegistrationComponent
   ],
   imports: [
     BrowserModule,
