@@ -14,9 +14,8 @@ import { CustomerInformationComponent } from './customer-information/customer-in
 import { ConfirmPageComponent } from './confirm-page/confirm-page.component';
 import { SelectLocationComponent } from './select-location/select-location.component';
 import {ReactiveFormsModule} from '@angular/forms';
-import { AlertModule } from 'ngx-bootstrap';
 import { MembershipRegistrationComponent } from './membership-registration/membership-registration.component';
-
+import { AlertModule } from 'ngx-bootstrap';
 
 @NgModule({
   declarations: [
@@ -28,9 +27,14 @@ import { MembershipRegistrationComponent } from './membership-registration/membe
     CustomerInformationComponent,
     ConfirmPageComponent,
      SelectLocationComponent,
-
-     MembershipRegistrationComponent,FormsModule,
-    ReactiveFormsModule
+     MembershipRegistrationComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,BrowserAnimationsModule,
+    BsDatepickerModule.forRoot(),TimepickerModule.forRoot(),FormsModule,
+    ReactiveFormsModule,
+    AlertModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
