@@ -14,8 +14,9 @@ import { CustomerInformationComponent } from './customer-information/customer-in
 import { ConfirmPageComponent } from './confirm-page/confirm-page.component';
 import { SelectLocationComponent } from './select-location/select-location.component';
 import {ReactiveFormsModule} from '@angular/forms';
-import { AlertModule } from 'ngx-bootstrap';
 import { MembershipRegistrationComponent } from './membership-registration/membership-registration.component';
+import { AlertModule } from 'ngx-bootstrap';
+
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { MembershipRegistrationComponent } from './membership-registration/membe
     AddOnComponent,
     CustomerInformationComponent,
     ConfirmPageComponent,
-     SelectLocationComponent,MembershipRegistrationComponent
+     SelectLocationComponent,MembershipRegistrationComponent,
+     SelectLocationComponent,
   ],
   imports: [
     BrowserModule,
