@@ -12,7 +12,7 @@ export class HomepageComponent implements OnInit {
   isChecked:boolean = false;
   rental: Date = new Date();
   return: Date = new Date();
-
+  states=['Maharashtra','Telangana','Andra Pradesh','Punjab'];
   homePage=new FormGroup({
     RentalDate:new FormControl('',[Validators.required]),
     ReturnDate:new FormControl('',[Validators.required]),
