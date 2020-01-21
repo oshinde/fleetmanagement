@@ -17,6 +17,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import { MembershipRegistrationComponent } from './membership-registration/membership-registration.component';
 import { AlertModule } from 'ngx-bootstrap';
 import {HttpClientModule} from '@angular/common/http';
+import { VehicleSelectionComponent } from './vehicle-selection/vehicle-selection.component';
 
 
 
@@ -31,6 +32,7 @@ import {HttpClientModule} from '@angular/common/http';
     ConfirmPageComponent,
      SelectLocationComponent,MembershipRegistrationComponent,
      SelectLocationComponent,
+     VehicleSelectionComponent,
   ],
   imports: [
     BrowserModule,
