@@ -1,0 +1,7 @@
+.box {
+    position: relative;
+    border-radius: 5px;
+    background-color: #e8e7e3;
+    padding: 20px 0 30px 20px;
+    margin: 0 -20px 0 0;
+} 

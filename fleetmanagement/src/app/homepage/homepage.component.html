@@ -14,18 +14,18 @@
     <div class="container">
         <form >
             <div class="row">
-                <div class="col-8">
+                <div class="col-8 box">
                     <h4 style="color:#17a2b8;"><u>Make Reservation</u></h4>
                     <div class="row">
-                        <div class="col-4">
+                        <div class="col-4" >
                             <p>Rental Date & Time</p>
-                            <input type="text" placeholder="Select Rental Date" class="form-control" bsDatepicker>
+                            <input type="text" placeholder="DD/MM/YYYY" class="form-control" bsDatepicker>
                             <timepicker [(ngModel)]="rental" name="RentalDate"></timepicker>
                             <pre class="alert alert-info">Time is: {{rental}}</pre>
                         </div>
                         <div class="col-4">
                             <p>Return Date & Time</p>
-                            <input type="text" placeholder="Select Return Date" class="form-control" bsDatepicker>
+                            <input type="text" placeholder="DD/MM/YYYY" class="form-control" bsDatepicker>
                             <timepicker [(ngModel)]="return" name="ReturnDate"></timepicker>
                             <pre class="alert alert-info">Time is: {{return}}</pre>
                         </div>
@@ -43,7 +43,7 @@
                             <input type="text" name="AirportCodeRental" class="form-control">
                         </div>
                         <div >
-                            <button type="button" class="btn btn-outline-primary">Find Airport</button>
+                            <a routerLink="/selectLocation"><button type="button" class="btn btn-outline-primary">Find Airport</button></a>
                         </div>
                     </div>
                     <!-- ..................... -->
@@ -63,7 +63,7 @@
                         </div>
                         <div class="col-2">
                             <br>
-                            <button type="button" class="btn btn-outline-primary">Search</button>
+                            <a routerLink="/selectLocation"><button type="button" class="btn btn-outline-primary">Search</button></a>
                         </div>
                     </div>
                     <br>
@@ -83,7 +83,7 @@
                                 <input type="text" name="AirportCodeReturn" class="form-control">
                             </div>
                             <div >
-                                <button type="button" class="btn btn-outline-primary">Find Airport</button>
+                                <a routerLink="/selectLocation"><button type="button" class="btn btn-outline-primary">Find Airport</button></a>
                             </div>
                         </div>
                         <!-- ..................... -->
@@ -103,7 +103,7 @@
                             </div>
                             <div class="col-2">
                                 <br>
-                                <button type="button" class="btn btn-outline-primary">Search</button>
+                                <a routerLink="/selectLocation"><button type="button" class="btn btn-outline-primary">Search</button></a>
                             </div>
                         </div>
                     </div>
@@ -113,9 +113,7 @@
                         <button type="button" class="btn btn-outline-primary">Continue Booking</button>
                     </div>
                 </div>
-                <div class="col-6">
-
-                </div>
+               
             </div>
         </form>
     </div>

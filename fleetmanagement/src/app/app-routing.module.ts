@@ -6,15 +6,17 @@ import { CustomerInformationComponent } from './customer-information/customer-in
 import { ConfirmPageComponent } from './confirm-page/confirm-page.component';
 import { SelectLocationComponent } from './select-location/select-location.component';
 import { MembershipRegistrationComponent } from './membership-registration/membership-registration.component';
+import { VehicleSelectionComponent } from './vehicle-selection/vehicle-selection.component';
 
 
 const routes: Routes = [{path:'',component:HomepageComponent},
 {path:'customerInformation',component:CustomerInformationComponent},
 {path:'homePage',component:HomepageComponent},
-{path:'confirmBooking',component:ConfirmPageComponent},
+{path:'confirmPage',component:ConfirmPageComponent},
 {path:'addOn',component:AddOnComponent},
 {path:'selectLocation',component:SelectLocationComponent},
-{path:'membershipRegistration',component:MembershipRegistrationComponent}];
+{path:'membershipRegistration',component:MembershipRegistrationComponent},
+{path:'vehicleSelection',component:VehicleSelectionComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
