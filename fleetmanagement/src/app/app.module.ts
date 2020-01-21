@@ -16,6 +16,7 @@ import { SelectLocationComponent } from './select-location/select-location.compo
 import {ReactiveFormsModule} from '@angular/forms';
 import { MembershipRegistrationComponent } from './membership-registration/membership-registration.component';
 import { AlertModule } from 'ngx-bootstrap';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { AlertModule } from 'ngx-bootstrap';
     AppRoutingModule,BrowserAnimationsModule,
     BsDatepickerModule.forRoot(),TimepickerModule.forRoot(),FormsModule,
     ReactiveFormsModule,
-    AlertModule.forRoot()
+    AlertModule.forRoot(),HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
