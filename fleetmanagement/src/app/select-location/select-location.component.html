@@ -8,10 +8,11 @@
     <title>AddOn Page</title>
 </head>
 <body>
-   
+    {{states|json}}
     <h4 style="color:#17a2b8;"><u>Location Selection </u></h4><br/>
     <h5>Select a Pick-up/Return location.</h5>
-    <h6>Your location description <b>some city name dynamically.</b> Please select one.</h6>
+    <p *ngFor="let hub of states[0].cities[0]">{{hub.hubaddress}}</p>
+    
 
     <div style="padding-left: 500px;">
         <br>

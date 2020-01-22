@@ -28,7 +28,6 @@ export class HomepageComponent implements OnInit {
 
   ngOnInit() {
     this._userserv.getStates().subscribe(data=>this.states=data);
-    console.log(this.states);
   }
 
 }
