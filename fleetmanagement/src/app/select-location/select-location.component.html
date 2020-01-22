@@ -8,10 +8,13 @@
     <title>AddOn Page</title>
 </head>
 <body>
-    {{states|json}}
     <h4 style="color:#17a2b8;"><u>Location Selection </u></h4><br/>
     <h5>Select a Pick-up/Return location.</h5>
-    <p *ngFor="let hub of states[0].cities[0]">{{hub.hubaddress}}</p>
+    <tr *ngFor="let hub of states[0].cities[1].hubs">
+        <td>{{hub.hubaddress}}</td>
+
+    </tr>
+
     
 
     <div style="padding-left: 500px;">
