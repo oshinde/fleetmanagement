@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
+import { StatedataService } from '../Services/statedata.service';
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
@@ -8,11 +9,11 @@ import { FormGroup, Validators, FormControl } from '@angular/forms';
 export class HomepageComponent implements OnInit {
 
  
-  constructor() { }
+  constructor(private _userserv:StatedataService) { }
   isChecked:boolean = false;
   rental: Date = new Date();
   return: Date = new Date();
-  states=['Maharashtra','Telangana','Andra Pradesh','Punjab'];
+  states=[];
   homePage=new FormGroup({
     RentalDate:new FormControl('',[Validators.required]),
     ReturnDate:new FormControl('',[Validators.required]),
@@ -26,6 +27,8 @@ export class HomepageComponent implements OnInit {
   });
 
   ngOnInit() {
+    this._userserv.getStates().subscribe(data=>this.states=data);
+    console.log(this.states);
   }
 
 }

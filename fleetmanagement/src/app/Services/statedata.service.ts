@@ -8,11 +8,11 @@ import { IState } from '../Interfaces/istate';
 })
 export class StatedataService {
 
-  url="http://localhost:8080/FleetManagement1/";
+  url="http://localhost:8080/fleetmngmnt/";
   constructor(private http: HttpClient) { }
   getStates():Observable<IState[]>
   {
-    return this.http.get<IState[]>(this.url+"crud/states");
+    return this.http.get<any>(this.url+"crud/states");
   }
 }
 

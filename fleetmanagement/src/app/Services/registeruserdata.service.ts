@@ -7,7 +7,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class RegisteruserdataService {
 
-  url="http://localhost:8080/FleetManagement1/";
+  url="http://localhost:8080/fleetmngmnt/";
   constructor(private http: HttpClient) { }
 
   getUsers():Observable<IRegisteruser[]>{

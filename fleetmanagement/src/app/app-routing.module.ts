@@ -7,6 +7,7 @@ import { ConfirmPageComponent } from './confirm-page/confirm-page.component';
 import { SelectLocationComponent } from './select-location/select-location.component';
 import { MembershipRegistrationComponent } from './membership-registration/membership-registration.component';
 import { VehicleSelectionComponent } from './vehicle-selection/vehicle-selection.component';
+import { TestingComponent } from './testing/testing.component';
 
 
 const routes: Routes = [{path:'',component:HomepageComponent},
@@ -16,7 +17,8 @@ const routes: Routes = [{path:'',component:HomepageComponent},
 {path:'addOn',component:AddOnComponent},
 {path:'selectLocation',component:SelectLocationComponent},
 {path:'membershipRegistration',component:MembershipRegistrationComponent},
-{path:'vehicleSelection',component:VehicleSelectionComponent}];
+{path:'vehicleSelection',component:VehicleSelectionComponent},
+{path:'testing',component:TestingComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

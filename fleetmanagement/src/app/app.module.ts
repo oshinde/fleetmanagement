@@ -18,6 +18,7 @@ import { MembershipRegistrationComponent } from './membership-registration/membe
 import { AlertModule } from 'ngx-bootstrap';
 import {HttpClientModule} from '@angular/common/http';
 import { VehicleSelectionComponent } from './vehicle-selection/vehicle-selection.component';
+import { TestingComponent } from './testing/testing.component';
 
 
 
@@ -33,6 +34,7 @@ import { VehicleSelectionComponent } from './vehicle-selection/vehicle-selection
      SelectLocationComponent,MembershipRegistrationComponent,
      SelectLocationComponent,
      VehicleSelectionComponent,
+     TestingComponent,
   ],
   imports: [
     BrowserModule,

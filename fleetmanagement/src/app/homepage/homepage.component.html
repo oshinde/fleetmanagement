@@ -58,13 +58,13 @@
                         <div class="col-3">
                             Enter State
                             <select name="" class="form-control" id="">
-                                <option ></option>
+                                <option *ngFor="let state of states">{{state.statename}}</option>
                             </select>
                         </div>
                         <div class="col-3">
                             City <br>
                             <select name="" class="form-control" id="">
-                                <option ></option>
+                                <option *ngFor="let state of states">{{state.cities[1].cityname}}</option>
                             </select>
                         </div>
                         <div class="col-2">
@@ -102,13 +102,13 @@
                             <div class="col-3">
                                 Enter State
                                 <select name="" class="form-control" id="">
-                                    <option *ngFor="let state of states">{{state}}</option>
+                                    <option *ngFor="let state of states">{{state.statename}}</option>
                                 </select>
                             </div>
                             <div class="col-3">
                                 City <br>
                                 <select name="" class="form-control" id="">
-                                    <option ></option>
+                                    <option *ngFor="let state of states">{{state.cities[1].cityname}}</option>
                                 </select>
                             </div>
                             <div class="col-2">
