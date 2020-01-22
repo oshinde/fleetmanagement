@@ -10,9 +10,9 @@ export class RegisteruserdataService {
   url="http://localhost:8080/fleetmngmnt/";
   constructor(private http: HttpClient) { }
 
-  getUsers():Observable<IRegisteruser[]>{
+  getUsers(code:number):Observable<IRegisteruser>{
     
-    return this.http.get<IRegisteruser[]>(this.url+"fleet/search/301");
+    return this.http.get<IRegisteruser>(this.url+"fleet/search/"+code);
     console.log();
   }
 }

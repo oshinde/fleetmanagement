@@ -13,7 +13,7 @@ import { TestingComponent } from './testing/testing.component';
 const routes: Routes = [{path:'',component:HomepageComponent},
 {path:'customerInformation',component:CustomerInformationComponent},
 {path:'homePage',component:HomepageComponent},
-{path:'confirmPage',component:ConfirmPageComponent},
+{path:'confirmPage/:code',component:ConfirmPageComponent},
 {path:'addOn',component:AddOnComponent},
 {path:'selectLocation',component:SelectLocationComponent},
 {path:'membershipRegistration',component:MembershipRegistrationComponent},
