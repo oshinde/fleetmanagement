@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import {IRegisteruser, IRegisteruser,  IRegisteruser} from '../Interfaces/iregisteruser';
+import {IRegisteruser} from '../Interfaces/iregisteruser';
 import { UserReg } from '../Classes/user-reg';
 import { RegisteruserdataService } from '../Services/registeruserdata.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-membership-registration',
   templateUrl: './membership-registration.component.html',
@@ -10,7 +11,7 @@ import { RegisteruserdataService } from '../Services/registeruserdata.service';
 })
 export class MembershipRegistrationComponent implements OnInit {
 
-  constructor(public fb:FormBuilder,private dataserv: RegisteruserdataService, private router: Router)
+  constructor(public fb:FormBuilder,private dataserv: RegisteruserdataService, private router: Router){}
    
 userObj:IRegisteruser;
 empForm:FormGroup;
@@ -99,12 +100,12 @@ onSubmit(userObj:FormGroup){
 
   }
   postData(userObj){
-this.dataserv.postcustomer(userObj).subscribe((data))=>{
-  console.log(data);
-   this.router.navigate(['/home']);
+this.dataserv.postUser(userObj).subscribe((data)=>{
+  this.router.navigate(['/home']);
+});
 }
 
   }
 
 
-}
+

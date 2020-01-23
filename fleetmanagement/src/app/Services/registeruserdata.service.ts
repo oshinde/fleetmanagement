@@ -15,5 +15,7 @@ export class RegisteruserdataService {
     return this.http.get<IRegisteruser>(this.url+"fleet/search/"+code);
     console.log();
   }
-  postUser(){}
+  postUser(userObj):Observable<any>{
+    return this.http.post<any>(this.url+"c",userObj);
+  }
 }
