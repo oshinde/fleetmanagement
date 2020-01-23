@@ -19,6 +19,7 @@ import { AlertModule } from 'ngx-bootstrap';
 import {HttpClientModule} from '@angular/common/http';
 import { VehicleSelectionComponent } from './vehicle-selection/vehicle-selection.component';
 import { TestingComponent } from './testing/testing.component';
+import { LoginPageComponent } from './login-page/login-page.component';
 
 
 
@@ -35,6 +36,7 @@ import { TestingComponent } from './testing/testing.component';
      SelectLocationComponent,
      VehicleSelectionComponent,
      TestingComponent,
+     LoginPageComponent,
   ],
   imports: [
     BrowserModule,
