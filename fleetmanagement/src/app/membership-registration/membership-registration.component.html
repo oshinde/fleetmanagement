@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <form [formGroup]="empForm" (ngSubmit)="onSubmit(empForm)" novalidate>
+    <form [formGroup]="empForm" (ngSubmit)="onSubmit(empForm)">
         <div class="container">
             <h4 style="color:#17a2b8;"><u>User Registration</u></h4>
             <div class="row">
@@ -17,7 +17,7 @@
                 <div class="col-6">
                     <br>
                     First Name
-                    <input type="text" formControlName="fname" class="form-control">  
+                    <input type="text" name="fname" formControlName="fname" class="form-control">  
                     <br>
                     Birth date
                     <input type="text" placeholder="DD/MM/YYYY" formControlName="dob" class="form-control" bsDatepicker>
@@ -65,13 +65,10 @@
                 <br>
                 <div class="row">
                     <div style="padding-right: 10px;">
-                        <button type="button" class="btn btn-outline-primary"
-                            style="padding:0px 80px 0px 80px">Confirm</button>
-                    </div>
-                    <div style="padding-left: 10px;">
                         <button type="submit" class="btn btn-outline-primary"
-                            style="padding:0px 80px 0px 80px">Modify</button>
+                            style="padding:0px 80px 0px 80px">Submit</button>
                     </div>
+                    
                 </div>
             </div>
         </div>

@@ -1,14 +1,15 @@
 import { IRegisteruser } from '../Interfaces/iregisteruser';
 
 export class UserReg implements IRegisteruser{
+ 
     userid: string;
 
 
     constructor(
-        public  userfname:string ,
-         public userlname:string ,
+        public  userfirstname:string ,
+         public userlastname:string ,
           public userdob:string ,
-          public userdrivinglisc:string,
+          public userdrivinglicenceno:string,
           public useraadharno:string,
           public userpassportno:string,
           public userphoneno:string,

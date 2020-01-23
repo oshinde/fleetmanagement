@@ -1,9 +1,9 @@
 export interface IRegisteruser {
     userid:string,
-    userfname:string,
-    userlname:string,
+    userfirstname:string,
+    userlastname:string,
     userdob:string,
-    userdrivinglisc:string,
+    userdrivinglicenceno:string,
     useraadharno:string,
     userpassportno:string,
     userphoneno:string,

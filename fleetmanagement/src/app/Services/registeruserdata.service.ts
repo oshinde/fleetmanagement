@@ -16,6 +16,6 @@ export class RegisteruserdataService {
     console.log();
   }
   postUser(userObj):Observable<any>{
-    return this.http.post<any>(this.url+"c",userObj);
+    return this.http.post<any>(this.url+"fleet/add",userObj);
   }
 }

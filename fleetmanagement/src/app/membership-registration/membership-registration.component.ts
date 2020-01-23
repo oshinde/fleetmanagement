@@ -86,22 +86,22 @@ onSubmit(userObj:FormGroup){
   }
   mapFormValues(form:FormGroup){
     this.userObj=new UserReg('','','','','','','','','','','');
-    this.userObj.userfname = form.controls.userfname.value;
-    this.userObj.userlname = form.controls.userlname.value;
-    this.userObj.userdob   = form.controls.userdob.value;
-    this.userObj.userdrivinglisc = form.controls.userdrivinglisc.value;
-    this.userObj.useraadharno = form.controls.useraadharno.value;
-    this.userObj.userpassportno = form.controls.userpassportno.value;
-    this.userObj.userphoneno = form.controls.userphoneno.value;
-    this.userObj.useremailid= form.controls.useremailid.value;
-    this.userObj.useraddress1= form.controls.useraddress1.value;
-    this.userObj.useraddress2 = form.controls.useraddress2.value;
-    this.userObj.userpassword= form.controls.userpassword.value;
+    this.userObj.userfirstname = form.controls.fname.value;
+    this.userObj.userlastname = form.controls.lname.value;
+    this.userObj.userdob   = form.controls.dob.value;
+    this.userObj.userdrivinglicenceno = form.controls.licsense.value;
+    this.userObj.useraadharno = form.controls.aadharno.value;
+    this.userObj.userpassportno = form.controls.passport.value;
+    this.userObj.userphoneno = form.controls.phoneno.value;
+    this.userObj.useremailid= form.controls.email.value;
+    this.userObj.useraddress1= form.controls.useradd1.value;
+    this.userObj.useraddress2 = form.controls.useradd2.value;
+    this.userObj.userpassword= form.controls.password.value;
 
   }
   postData(userObj){
 this.dataserv.postUser(userObj).subscribe((data)=>{
-  this.router.navigate(['/home']);
+  this.router.navigate(['/homePage']);
 });
 }
 
