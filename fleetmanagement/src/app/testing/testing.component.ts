@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { StatedataService } from '../Services/statedata.service';
-
+import {FormGroup,FormBuilder,Validators} from '@angular/forms';
+import {Router} from '@angular/router';
 @Component({
   selector: 'app-testing',
   templateUrl: './testing.component.html',
@@ -8,12 +8,12 @@ import { StatedataService } from '../Services/statedata.service';
 })
 export class TestingComponent implements OnInit {
 
-  users=[];
-  constructor(private _userserv:StatedataService) { }
+  userForm: FormGroup;
+  
+  constructor() { }
 
   ngOnInit() {
-    this._userserv.getStates().subscribe(data=>this.users=data);
-    console.log(this.users);
+    
   }
 
 }

@@ -15,4 +15,5 @@ export class RegisteruserdataService {
     return this.http.get<IRegisteruser>(this.url+"fleet/search/"+code);
     console.log();
   }
+  postUser(){}
 }

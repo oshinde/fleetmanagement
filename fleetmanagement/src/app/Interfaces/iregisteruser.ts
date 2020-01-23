@@ -8,7 +8,7 @@ export interface IRegisteruser {
     userpassportno:string,
     userphoneno:string,
     useremailid:string,
-    userpassword:string,
     useraddress1:string,
-    useraddress2:string
+    useraddress2:string,
+    userpassword:string
 }
