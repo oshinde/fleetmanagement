@@ -103,14 +103,16 @@
 
                             <div class="col-3">
                                 Enter State
-                                <select name="" class="form-control" id="">
-                                    <option *ngFor="let state of states">{{state.statename}}</option>
+                                <select name="" class="form-control" (change)="onState($event)">
+                                    <option *ngFor="let state of states" [value]="state.stateid">{{state.statename}}</option>
                                 </select>
                             </div>
-                            <div class="col-3">
+                             <div class="col-3">
                                 City <br>
                                 <select name="" class="form-control" id="">
-                                    <option *ngFor="let city of states[1].cities">{{city.cityname}}</option>
+                                    <option *ngFor="let city of dispCity">{{city.cityname}}</option>
+                                    <!-- <option *ngFor="let city of states">{{city.cityname}}</option> -->
+    
                                 </select>
                             </div>
                             <div class="col-2">
