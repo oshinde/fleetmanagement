@@ -20,10 +20,11 @@ export class HandoverComponent implements OnInit {
    });
   }
   onSubmit(event: any) {
+    this.billid= event.target.billsearch.value;
     console.log(this.billid);
     console.log("hello");
     this.isChecked=!this.isChecked;
-    this.billid= event.target.billsearch.value;
+    
     
  }
 

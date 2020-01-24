@@ -9,11 +9,12 @@
 </head>
 <body>
     <div align="center">
+        
     <h4 style="color:#17a2b8;"><u> HandOver</u></h4><br/>
     </div>
     <div style="padding-left: 500px;">
         <div class="row">
-            <div [formGroup]="myGroup">
+            
             <div style="padding-right: 10px;"  >
                 <form >
                 <input type="text" placeholder="Booking Id" id="bookingid"
@@ -28,7 +29,9 @@
 
             <div *ngIf="isChecked" class="container">
                 <h4 style="color:#17a2b8;"><u>Billing</u></h4>
+                <div [formGroup]="myGroup">
                 <div class="row">
+                    
                     <div class="col-2">
                         <br>
                         User Id
@@ -69,6 +72,7 @@
                         <input type="text" formControlName="email" class="form-control">
                     </div>
                 </div>
+                </div>
     
                 <div style="padding-left: 250px;">
                     <br>
@@ -81,8 +85,9 @@
                     </div>
                 </div>
             </div>
-            </div>
+            
         </div>
+    
     </div>
 
 </body>
