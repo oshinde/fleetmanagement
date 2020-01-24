@@ -80,7 +80,7 @@ onCity(cityid)
 
   console.log("state id"+this.PStateid+"cityid"+this.index);
 
-  console.log(this.states[1].cities[1].hubs[1].hubaddress);
+  console.log(this.states[0].cities[1].hubs[1].hubaddress);
 
   for( let c in this.states[this.PStateid].cities[this.index].hubs)
   {
