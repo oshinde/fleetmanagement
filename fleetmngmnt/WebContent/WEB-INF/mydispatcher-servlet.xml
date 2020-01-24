@@ -16,8 +16,13 @@
 <context:component-scan base-package="City"/>
 <context:component-scan base-package="State"/>
 <context:component-scan base-package="Hub"/>
-<context:component-scan base-package="Carcategory"/>
 <context:component-scan base-package="registeruser"/>
+<context:component-scan base-package="Amenity"/>
+<context:component-scan base-package="Billing"/>
+<context:component-scan base-package="Booking"/>
+<context:component-scan base-package="Car"/>
+<context:component-scan base-package="Carcategory"/>
+<context:component-scan base-package="Employee"/>
 <tx:annotation-driven transaction-manager="transactionManager"/>
 <mvc:annotation-driven/>
  <bean id="dataSource"
