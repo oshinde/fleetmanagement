@@ -14,7 +14,7 @@ export class BillingService {
      this.bid=parseInt((document.getElementById("bookingid") as HTMLInputElement).value);
    }
 
-   getUsers(bid:number):Observable<any>{
+   getBill(bid:number):Observable<any>{
     this.bid=parseInt((document.getElementById("bookingid") as HTMLInputElement).value);
     console.log(bid);
     return this.http.get<any>(this.url+"fleet/search/"+this.bid);
