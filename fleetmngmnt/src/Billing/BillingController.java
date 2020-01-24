@@ -10,7 +10,7 @@ import fleet.Billing;
 
 
 @RestController  
-@CrossOrigin("http://localhost:4200")
+@CrossOrigin(origins="*")
 public class BillingController 
 {
 	@Autowired
