@@ -8,6 +8,8 @@ import { IState } from '../Interfaces/istate';
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent implements OnInit {
+  selectedOrg: any;
+  selectedDay: any;
 
 
   constructor(private _userserv: StatedataService) { }
@@ -53,19 +55,19 @@ export class HomepageComponent implements OnInit {
 
   }
 
+  selectChangeHandler(event: any) {
+    //update the ui
+    this.selectedDay = event.target.value;
+  }
   onStateRent(stateid) {
-    //this.dispCity = [];
+    
+    
     this.dispCityRental=[];
     this.sidRent = stateid.target.options[stateid.target.selectedIndex].value;
 
 
     this.PStateidRent = this.sidRent;
     console.log("sid of state:" + this.sidRent);
-
-    console.log("sid is" + this.sidRent);
-
-
-    console.log("sid is" + this.sidRent);
 
     this.citys = this.states.filter(el => {
       console.log(el.stateid);
@@ -74,19 +76,13 @@ export class HomepageComponent implements OnInit {
 
     )
     console.log("inside state for city id" + stateid.target.selectedIndex);
-    //states[0].cities[1].hubs
+
     console.log(this.states[0].cities[1].hubs);
-    // for(let v=0;v<this.citys.length;v++)
-    //     {
-    //       this.dispCity.push(this.citys.cities);
-    //     }
-    //     console.log(this.states[this.sid].cities);
-    // console.log(typeof(this.citys[0].cities[0]));
 
     for (var x in this.states[this.sidRent].cities) {
       this.dispCityRental.push(this.states[this.sidRent].cities[x]);
     }
-    // console.log(this.dispCity);
+ console.log(this.states);
   }
 
 
@@ -111,19 +107,13 @@ export class HomepageComponent implements OnInit {
 
     )
     console.log("inside state for city id" + stateid.target.selectedIndex);
-    //states[0].cities[1].hubs
+ 
     console.log(this.states[0].cities[1].hubs);
-    // for(let v=0;v<this.citys.length;v++)
-    //     {
-    //       this.dispCity.push(this.citys.cities);
-    //     }
-    //     console.log(this.states[this.sid].cities);
-    // console.log(typeof(this.citys[0].cities[0]));
-
+   
     for (var x in this.states[this.sidReturn].cities) {
       this.dispCityReturn.push(this.states[this.sidReturn].cities[x]);
     }
-    // console.log(this.dispCity);
+   
   }
 
 
@@ -159,6 +149,7 @@ export class HomepageComponent implements OnInit {
 
     console.log(this.dispHubRent);
     console.log("inside hubs");
+    console.log(this.selectedOrg);
   }
 
   onCityReturn(cityid) {
@@ -174,7 +165,7 @@ export class HomepageComponent implements OnInit {
       this.dispHubReturn.push(this.states[this.PStateidReturn].cities[this.indexReturn].hubs[c].hubaddress);
     }
 
-    console.log(this.dispHubReturn);
+
     console.log("inside hubs");
   }
 
