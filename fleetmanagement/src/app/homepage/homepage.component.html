@@ -57,25 +57,25 @@
 
                         <div class="col-3">
                             Enter State
-                            <select name="" class="form-control" (change)="onState($event)">
+                            <select name="" class="form-control" (change)="onStateRent($event)">
                                
                                 <option *ngFor="let state of states" [value]="state.stateid">{{state.statename}}</option>
                             </select>
                         </div>
                          <div class="col-3">
                             City <br>
-                            <select name="" class="form-control" (change)="onCity($event)">
+                            <select name="" class="form-control" (change)="onCityRent($event)">
                                 
-                                <option *ngFor="let city of dispCity" [value]="city.id">{{city.cityname}}</option>
+                                <option *ngFor="let city of dispCityRental" [value]="city.id">{{city.cityname}}</option>
                                 <!-- <option *ngFor="let city of states">{{city.cityname}}</option> -->
 
                             </select>
                         </div>
                         <div class="col-3">
-                            City <br>
+                            Hub <br>
                             <select name="" class="form-control" id="">
                                 
-                                <option *ngFor="let city of dispHub">{{city}}</option>
+                                <option *ngFor="let city of dispHubRent">{{city}}</option>
                                 <!-- <option *ngFor="let city of states">{{city.cityname}}</option> -->
 
                             </select>
@@ -114,15 +114,24 @@
 
                             <div class="col-3">
                                 Enter State
-                                <select name="" class="form-control" (change)="onState($event)">
+                                <select name="" class="form-control" (change)="onStateReturn($event)">
                                     <option *ngFor="let state of states" [value]="state.stateid">{{state.statename}}</option>
                                 </select>
                             </div>
                              <div class="col-3">
                                 City <br>
-                                <select name="" class="form-control" id="">
+                                <select name="" class="form-control" (change)="onCityReturn($event)" id="">
                                    
-                                    <option *ngFor="let city of dispCity">{{city.cityname}}</option>
+                                    <option *ngFor="let city of dispCityReturn">{{city.cityname}}</option>
+                                    <!-- <option *ngFor="let city of states">{{city.cityname}}</option> -->
+    
+                                </select>
+                            </div>
+                            <div class="col-3">
+                                Hub <br>
+                                <select name="" class="form-control" id="">
+                                    
+                                    <option *ngFor="let city of dispHubReturn">{{city}}</option>
                                     <!-- <option *ngFor="let city of states">{{city.cityname}}</option> -->
     
                                 </select>
