@@ -11,14 +11,18 @@ export class HomepageComponent implements OnInit {
 
  
   constructor(private _userserv:StatedataService) { }
-
+  index:number;
+  PStateid:number;
   isChecked:boolean = false;
   rental: Date = new Date();
   return: Date = new Date();
   sid:number;
+  cid:number;
   states=[];
   citys:any;
+  hubys:any;
   dispCity=[];
+  dispHub=[];
   homePage=new FormGroup({
     RentalDate:new FormControl('',[Validators.required]),
     ReturnDate:new FormControl('',[Validators.required]),
@@ -39,24 +43,45 @@ export class HomepageComponent implements OnInit {
   onState(stateid){
     this.dispCity=[];
     this.sid=stateid.target.options[stateid.target.selectedIndex].value;
+    this.PStateid=this.sid;
+    console.log("sid of state:"+this.sid);
    this.citys=this.states.filter(el=>{console.log(el.stateid);
     return el.stateid==this.sid}
     
     )
-
-
+    console.log("inside state for city id"+stateid.target.selectedIndex);
+//states[0].cities[1].hubs
+console.log(this.states[0].cities[1].hubs);
 // for(let v=0;v<this.citys.length;v++)
 //     {
 //       this.dispCity.push(this.citys.cities);
 //     }
-    console.log(this.states[this.sid].cities);
-console.log(typeof(this.citys[0].cities[0]));
+//     console.log(this.states[this.sid].cities);
+// console.log(typeof(this.citys[0].cities[0]));
 
 for(var x in this.states[this.sid].cities){
   this.dispCity.push(this.states[this.sid].cities[x]);
 }
-console.log(this.dispCity);
+// console.log(this.dispCity);
 } 
+onCity(cityid)
+{
+  this.index=cityid.target.selectedIndex; //city index
+
+  this.dispHub=[]; //hub array
+
+  console.log("state id"+this.PStateid+"cityid"+this.index);
+
+  console.log(this.states[this.PStateid].cities[this.index].hubs[1].hubaddress);
+
+  for( let c in this.states[this.PStateid].cities[this.index].hubs)
+  {
+    this.dispHub.push(this.states[this.PStateid].cities[this.index].hubs[c].hubaddress);
+  }
+
+  console.log(this.dispHub);
+  console.log("inside hubs");
+}
 
 
 }
