@@ -8,6 +8,8 @@ import { SelectLocationComponent } from './select-location/select-location.compo
 import { MembershipRegistrationComponent } from './membership-registration/membership-registration.component';
 import { VehicleSelectionComponent } from './vehicle-selection/vehicle-selection.component';
 import { TestingComponent } from './testing/testing.component';
+import { HandoverComponent } from './handover/handover.component';
+import { BillingComponent } from './billing/billing.component';
 
 
 const routes: Routes = [{path:'',component:HomepageComponent},
@@ -18,7 +20,9 @@ const routes: Routes = [{path:'',component:HomepageComponent},
 {path:'selectLocation',component:SelectLocationComponent},
 {path:'membershipRegistration',component:MembershipRegistrationComponent},
 {path:'vehicleSelection',component:VehicleSelectionComponent},
-{path:'testing',component:TestingComponent}];
+{path:'testing',component:TestingComponent},
+{path:'handOver',component:HandoverComponent},
+{path:'billing',component:BillingComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

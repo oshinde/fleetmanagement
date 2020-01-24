@@ -20,6 +20,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { VehicleSelectionComponent } from './vehicle-selection/vehicle-selection.component';
 import { TestingComponent } from './testing/testing.component';
 import { LoginPageComponent } from './login-page/login-page.component';
+import { HandoverComponent } from './handover/handover.component';
+import { BillingComponent } from './billing/billing.component';
 
 
 
@@ -37,6 +39,8 @@ import { LoginPageComponent } from './login-page/login-page.component';
      VehicleSelectionComponent,
      TestingComponent,
      LoginPageComponent,
+     HandoverComponent,
+     BillingComponent,
   ],
   imports: [
     BrowserModule,

@@ -43,8 +43,12 @@ export class HomepageComponent implements OnInit {
   onState(stateid){
     this.dispCity=[];
     this.sid=stateid.target.options[stateid.target.selectedIndex].value;
+<<<<<<< HEAD
     this.PStateid=this.sid;
     console.log("sid of state:"+this.sid);
+=======
+    console.log("sid is"+this.sid);
+>>>>>>> 06db36e3908e4fc5b866d24d8aeed28bfb2abfc5
    this.citys=this.states.filter(el=>{console.log(el.stateid);
     return el.stateid==this.sid}
     
