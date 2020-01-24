@@ -17,6 +17,8 @@ export class BillingService {
    getUsers(bid:number):Observable<any>{
     this.bid=parseInt((document.getElementById("bookingid") as HTMLInputElement).value);
     return this.http.get<any>(this.url+"fleet/search/"+bid);
+    console.log(bid);
+    return this.http.get<any>(this.url+"fleet/search/"+this.bid);
     console.log();
   }
 }
