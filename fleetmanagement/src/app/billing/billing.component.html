@@ -11,53 +11,46 @@
 <body>
     <form [formGroup]="empForm" (ngSubmit)="onSubmit(empForm)">
         <div class="container">
-            <h4 style="color:#17a2b8;"><u>User Registration</u></h4>
+            <h4 style="color:#17a2b8;"><u>Billing</u></h4>
             <div class="row">
-                
-                <div class="col-4">
+                <div class="col-2">
+                    <br>
+                    User Id
+                    <input type="text" name="fname" formControlName="fname" class="form-control">  
+                </div>  
+                <div class="col-3">  
                     <br>
                     First Name
                     <input type="text" name="fname" formControlName="fname" class="form-control">  
-                    <br>
-                    Birth date
-                    <input type="text" placeholder="DD/MM/YYYY" formControlName="dob" class="form-control" bsDatepicker>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <br>
                     Last Name
-                    <input type="text" formControlName="lname" class="form-control">
-                    <br>
-                    Driving Liscense
-                    <input type="text" formControlName="licsense" class="form-control">  
+                    <input type="text" name="fname" formControlName="fname" class="form-control">
                 </div>
-            </div>
-           
+            </div> 
             <div class="row">
                 <div class="col-4">
-
+                    <br>
+                    Address
+                    <input type="text" formControlName="useradd1" class="form-control">
                     <br>
                     Aadhar No.
                     <input type="text" formControlName="aadharno" class="form-control">
                     <br>
-                    Phone No.
-                    <input type="text" formControlName="phoneno" class="form-control">
-                    <br>
-                    Address1
-                    <input type="text" formControlName="useradd1" class="form-control">
-                    <br>
-                    Password
-                    <input type="text" formControlName="password" class="form-control">
+                    Start date
+                    <input type="text" placeholder="DD/MM/YYYY" formControlName="dob" class="form-control" bsDatepicker>              
                 </div>
                 <div class="col-4"> 
                     <br>
-                    Passport No.
+                    Vehicle type
                     <input type="text" formControlName="passport" class="form-control">
                     <br>
-                    Email
+                    pickup Hub
                     <input type="text" formControlName="email" class="form-control">
                     <br>
-                    Address2
-                    <input type="text" formControlName="useradd2" class="form-control">
+                    Drop Hub
+                    <input type="text" formControlName="email" class="form-control">
                 </div>
             </div>
 
@@ -66,7 +59,7 @@
                 <div class="row">
                     <div style="padding-right: 10px;">
                         <button type="submit" class="btn btn-outline-primary"
-                            style="padding:0px 80px 0px 80px">Submit</button>
+                            style="padding:0px 80px 0px 80px">Confirm</button>
                     </div>
                     
                 </div>
