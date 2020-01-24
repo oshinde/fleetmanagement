@@ -21,13 +21,13 @@ public class Registerusercontroller
 	@Autowired
 	RegisteruserManager manager;
 	
-	@GetMapping(value = "fleet/search",headers = "Accept=application/json")  
+	@GetMapping(value = "fleet/usersearch",headers = "Accept=application/json")  
 	 public String showusers()
 	 {
 		  return new Gson().toJson(manager.getCustomers());
 	 }
 	
-	@GetMapping(value = "fleet/search/{id}", headers = "Accept=application/json")  
+	@GetMapping(value = "fleet/usersearch/{id}", headers = "Accept=application/json")  
 	 public Registeruser getPro(@PathVariable int id)
 	 {
 		Registeruser c=manager.getCustomer(id);
