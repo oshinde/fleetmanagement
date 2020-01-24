@@ -11,8 +11,8 @@ export class RegisteruserdataService {
   constructor(private http: HttpClient) { }
 
   getUsers(code:number):Observable<IRegisteruser>{
-    
-    return this.http.get<IRegisteruser>(this.url+"fleet/search/"+code);
+  
+    return this.http.get<IRegisteruser>(this.url+"fleet/usersearch/"+code);
     console.log();
   }
   postUser(userObj):Observable<any>{

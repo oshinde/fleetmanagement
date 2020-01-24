@@ -27,7 +27,7 @@ public class Registerusercontroller
 		  return new Gson().toJson(manager.getCustomers());
 	 }
 	
-	@GetMapping(value = "fleet/search/{id}", headers = "Accept=application/json")  
+	@GetMapping(value = "fleet/usersearch/{id}", headers = "Accept=application/json")  
 	 public Registeruser getPro(@PathVariable int id)
 	 {
 		Registeruser c=manager.getCustomer(id);

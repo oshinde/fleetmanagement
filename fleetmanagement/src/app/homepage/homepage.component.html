@@ -57,14 +57,14 @@
 
                         <div class="col-3">
                             Enter State
-                            <select name="" class="form-control" (change)="onStateRent($event)">
+                            <select name="" class="form-control" (click)="onStateRent($event)">
                                
                                 <option *ngFor="let state of states" [value]="state.stateid">{{state.statename}}</option>
                             </select>
                         </div>
                          <div class="col-3">
                             City <br>
-                            <select name="" class="form-control" (change)="onCityRent($event)">
+                            <select name="" class="form-control" (click)="onCityRent($event)">
                                 
                                 <option *ngFor="let city of dispCityRental" [value]="city.id">{{city.cityname}}</option>
                                 <!-- <option *ngFor="let city of states">{{city.cityname}}</option> -->
@@ -73,7 +73,7 @@
                         </div>
                         <div class="col-3">
                             Hub <br>
-                            <select name="" class="form-control" (click)="selectChangeHandler($event)">
+                            <select name="" class="form-control" (click)="setRentLocation($event)">
                                 
                                 <option *ngFor="let city of dispHubRent" [value]="city">{{city}}</option>
                                 <!-- <option *ngFor="let city of states">{{city.cityname}}</option> -->
@@ -114,13 +114,13 @@
 
                             <div class="col-3">
                                 Enter State
-                                <select name="" class="form-control" (change)="onStateReturn($event)">
+                                <select name="" class="form-control" (click)="onStateReturn($event)">
                                     <option *ngFor="let state of states" [value]="state.stateid">{{state.statename}}</option>
                                 </select>
                             </div>
                              <div class="col-3">
                                 City <br>
-                                <select name="" class="form-control" (change)="onCityReturn($event)" id="">
+                                <select name="" class="form-control" (click)="onCityReturn($event)" id="">
                                    
                                     <option *ngFor="let city of dispCityReturn">{{city.cityname}}</option>
                                     <!-- <option *ngFor="let city of states">{{city.cityname}}</option> -->
@@ -129,7 +129,7 @@
                             </div>
                             <div class="col-3">
                                 Hub <br>
-                                <select name="" class="form-control" id="">
+                                <select name="" class="form-control" (click)="setReturnLocation($event)">
                                     
                                     <option *ngFor="let city of dispHubReturn">{{city}}</option>
                                     <!-- <option *ngFor="let city of states">{{city.cityname}}</option> -->
@@ -145,13 +145,13 @@
                     <!-- ....................... -->
                     <br>
                     <div align="center" style="padding-bottom:30px">
-                        <a routerLink="/vehicleSelection"><button type="button" class="btn btn-outline-primary">Continue Booking</button></a>
+                       <button type="button" class="btn btn-outline-primary" (click)="setValues($event)">Continue Booking</button>
                     </div>
                 </div>
                
             </div>
             <br>
-            <p><span>You selected: </span><b>{{selectedDay}}</b></p>
+           
         </form>
     </div>
 </body>
