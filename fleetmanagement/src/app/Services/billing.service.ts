@@ -9,14 +9,15 @@ import {Observable} from 'rxjs';
 export class BillingService {
   bid :number;
   url="http://localhost:8080/fleetmngmnt/";
-  constructor(http:HttpClient)
+  constructor(private http:HttpClient)
    { 
      this.bid=parseInt((document.getElementById("bookingid") as HTMLInputElement).value);
    }
 
-   getUsers(code:number):Observable<any>{
+   getUsers(bid:number):Observable<any>{
     this.bid=parseInt((document.getElementById("bookingid") as HTMLInputElement).value);
-    return this.http.get<any>(this.url+"fleet/search/"+code);
+    console.log(bid);
+    return this.http.get<any>(this.url+"fleet/search/"+this.bid);
     console.log();
   }
 }

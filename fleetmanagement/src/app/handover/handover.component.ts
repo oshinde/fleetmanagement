@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HandoverComponent implements OnInit {
 
   constructor() { }
-
+  billid:number;
   ngOnInit() {
   }
 
