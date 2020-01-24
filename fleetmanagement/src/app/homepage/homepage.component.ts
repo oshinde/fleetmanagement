@@ -44,8 +44,12 @@ export class HomepageComponent implements OnInit {
     this.dispCity=[];
     this.sid=stateid.target.options[stateid.target.selectedIndex].value;
 <<<<<<< HEAD
+<<<<<<< HEAD
     this.PStateid=this.sid;
     console.log("sid of state:"+this.sid);
+=======
+    console.log("sid is"+this.sid);
+>>>>>>> 06db36e3908e4fc5b866d24d8aeed28bfb2abfc5
 =======
     console.log("sid is"+this.sid);
 >>>>>>> 06db36e3908e4fc5b866d24d8aeed28bfb2abfc5
