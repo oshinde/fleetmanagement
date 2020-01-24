@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { StatedataService } from '../Services/statedata.service';
+import { Router } from '@angular/router';
 import { IState } from '../Interfaces/istate';
 @Component({
   selector: 'app-homepage',
@@ -9,10 +10,12 @@ import { IState } from '../Interfaces/istate';
 })
 export class HomepageComponent implements OnInit {
   selectedOrg: any;
-  selectedDay: any;
+  selectedDay: string;
+  rentDay: any;
+  returnDay: any;
 
 
-  constructor(private _userserv: StatedataService) { }
+  constructor(private _userserv: StatedataService,private router: Router) { }
   indexRent: number;
   indexReturn:number;
 
@@ -55,9 +58,39 @@ export class HomepageComponent implements OnInit {
 
   }
 
-  selectChangeHandler(event: any) {
+
+setValues()
+{
+ console.log(this.isChecked);
+ 
+  localStorage.setItem('rentLocation',this.rentDay);
+  if(this.isChecked==false)
+  {
+    localStorage.setItem('returnLocation',this.rentDay);  
+  }
+  else
+  {
+    localStorage.setItem('returnLocation',this.returnDay);
+  }
+  
+  this.router.navigate(['confirmPage/301']);
+
+}
+hello()
+{
+  
+  console.log(localStorage.getItem('rentLocation'));
+  console.log(localStorage.getItem('returnLocation'));
+
+}
+
+setRentLocation(event: any) {
     //update the ui
-    this.selectedDay = event.target.value;
+    this.rentDay = event.target.value;
+  }
+  setReturnLocation(event: any) {
+    //update the ui
+    this.returnDay = event.target.value;
   }
   onStateRent(stateid) {
     
@@ -68,7 +101,7 @@ export class HomepageComponent implements OnInit {
 
     this.PStateidRent = this.sidRent;
     console.log("sid of state:" + this.sidRent);
-
+    
     this.citys = this.states.filter(el => {
       console.log(el.stateid);
       return el.stateid == this.sidRent

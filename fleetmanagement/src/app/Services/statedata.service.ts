@@ -14,6 +14,9 @@ export class StatedataService {
   {
     return this.http.get<any>(this.url+"crud/states");
   }
+
+  
+  
 }
 
 

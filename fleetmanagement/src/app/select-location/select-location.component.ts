@@ -10,8 +10,13 @@ export class SelectLocationComponent implements OnInit {
 
   constructor(private _userserv:StatedataService) { }
   states=[];
+
+
+  
+  
   ngOnInit() {
     this._userserv.getStates().subscribe(data=>this.states=data);
+
   }
   }
 

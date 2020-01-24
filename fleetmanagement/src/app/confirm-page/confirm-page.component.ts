@@ -9,13 +9,18 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ConfirmPageComponent implements OnInit {
   users:IRegisteruser;
+ rentLocation=localStorage.getItem('rentLocation');
+  returnLocation=localStorage.getItem('returnLocation');
   constructor(private _userserv:RegisteruserdataService,private _userCode: ActivatedRoute,
     private router:Router) { }
-
+   
+   
   ngOnInit() {
     let reguser:string=this._userCode.snapshot.params['code'];
     let code1:number=parseInt(reguser);
     this._userserv.getUsers(code1).subscribe(data=>this.users=data);
+    
+    
   }
 
 }
