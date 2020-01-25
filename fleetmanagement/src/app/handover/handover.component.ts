@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { BillingService } from '../Services/billing.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-handover',
@@ -10,22 +12,25 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class HandoverComponent implements OnInit {
   isChecked: boolean = false;
   myGroup: FormGroup;
+  users: any;
+  userid:any;
+  constructor(private _userserv:BillingService,private _userCode: ActivatedRoute,
+    private router:Router) { }
 
-  constructor() { }
+
+  
   billid:number;
   ngOnInit() {
     this.myGroup = new FormGroup({
       search1: new FormControl(),
-      fname:new FormControl()
-   });
+      fname:new FormControl(),
+      });
+      
+    
   }
-  onSubmit(event: any) {
-    this.billid= event.target.billsearch.value;
-    console.log(this.billid);
-    console.log("hello");
-    this.isChecked=!this.isChecked;
-    
-    
+  onSubmit() {
+    this.userid = this.myGroup.controls.search1.value;
+    this._userserv.getBill(this.userid).subscribe(data=>this.users=data);
  }
 
 }
