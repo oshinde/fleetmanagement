@@ -22,8 +22,11 @@ const routes: Routes = [{path:'',component:HomepageComponent},
 {path:'selectLocation',component:SelectLocationComponent},
 {path:'membershipRegistration',component:MembershipRegistrationComponent},
 {path:'vehicleSelection',component:VehicleSelectionComponent},
+<<<<<<< HEAD
 {path:'testing',component:TestingComponent},
 {path:'userLogin',component:LoginPageComponent},
+=======
+>>>>>>> 945e8e1fed8575b2b41de72e215ffe7bcb0af8e7
 {path:'testing/:code',component:TestingComponent},
 {path:'handOver',component:HandoverComponent}];
 
