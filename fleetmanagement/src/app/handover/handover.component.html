@@ -9,19 +9,85 @@
 </head>
 <body>
     <div align="center">
+        
     <h4 style="color:#17a2b8;"><u> HandOver</u></h4><br/>
     </div>
     <div style="padding-left: 500px;">
         <div class="row">
-            <div style="padding-right: 10px;">
+            
+            <div style="padding-right: 10px;"  >
+                <form >
                 <input type="text" placeholder="Booking Id" id="bookingid"
-                formControlName="aadharno" class="form-control">
+                 class="form-control" name="billsearch" formControlName="search1">
+                </form>
             </div>
             <div style="padding-left: 10px;">
-                <a routerLink="/billing"><input type="button" class="btn btn-outline-primary" 
-                    value="Search"></a><br><br>
+                
+                <input type="submit" (click)="onSubmit($event)"class="btn btn-outline-primary" 
+                    value="Search" ><br><br>
             </div> 
+
+            <div *ngIf="isChecked" class="container">
+                <h4 style="color:#17a2b8;"><u>Billing</u></h4>
+                <div [formGroup]="myGroup">
+                <div class="row">
+                    
+                    <div class="col-2">
+                        <br>
+                        User Id
+                        <input type="text" name="fname" formControlName="fname" class="form-control">  
+                    </div>  
+                    <div class="col-3">  
+                        <br>
+                        First Name
+                        <input type="text" name="fname" formControlName="fname" class="form-control">  
+                    </div>
+                    <div class="col-3">
+                        <br>
+                        Last Name
+                        <input type="text" name="fname" formControlName="fname" class="form-control">
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="col-4">
+                        <br>
+                        Address
+                        <input type="text" formControlName="useradd1" class="form-control">
+                        <br>
+                        Aadhar No.
+                        <input type="text" formControlName="aadharno" class="form-control">
+                        <br>
+                        Start date
+                        <input type="text" placeholder="DD/MM/YYYY" formControlName="dob" class="form-control" bsDatepicker>              
+                    </div>
+                    <div class="col-4"> 
+                        <br>
+                        Vehicle type
+                        <input type="text" formControlName="passport" class="form-control">
+                        <br>
+                        pickup Hub
+                        <input type="text" formControlName="email" class="form-control">
+                        <br>
+                        Drop Hub
+                        <input type="text" formControlName="email" class="form-control">
+                    </div>
+                </div>
+                </div>
+    
+                <div style="padding-left: 250px;">
+                    <br>
+                    <div class="row">
+                        <div style="padding-right: 10px;">
+                            <button type="submit" class="btn btn-outline-primary"
+                                style="padding:0px 80px 0px 80px">Confirm</button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
         </div>
+    
     </div>
 
 </body>

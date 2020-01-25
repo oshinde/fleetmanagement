@@ -21,7 +21,7 @@ import { VehicleSelectionComponent } from './vehicle-selection/vehicle-selection
 import { TestingComponent } from './testing/testing.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { HandoverComponent } from './handover/handover.component';
-import { BillingComponent } from './billing/billing.component';
+
 
 
 
@@ -40,7 +40,6 @@ import { BillingComponent } from './billing/billing.component';
      TestingComponent,
      LoginPageComponent,
      HandoverComponent,
-     BillingComponent,
   ],
   imports: [
     BrowserModule,

@@ -21,7 +21,7 @@ public class Registerusercontroller
 	@Autowired
 	RegisteruserManager manager;
 	
-	@GetMapping(value = "fleet/search",headers = "Accept=application/json")  
+	@GetMapping(value = "fleet/usersearch",headers = "Accept=application/json")  
 	 public String showusers()
 	 {
 		  return new Gson().toJson(manager.getCustomers());
