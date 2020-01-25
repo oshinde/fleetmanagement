@@ -13,13 +13,13 @@
     <h4 style="color:#17a2b8;"><u> Rental Add-ons </u></h4><br/>
     <div class="container">
         <table>
-       <tr ><th > <input type="checkbox" name="Gps" >GPS Navigation System</th>
+       <tr ><th > <input type="checkbox" name="Gps" value="GPS Navigation System">GPS Navigation System</th>
             <td > <div style="padding-left: 40px;">$10.00/day</div></td></tr><br/><br/>
 
-       <tr><th><input type="checkbox" name="Campingkit" >Camping Kit</th>
+       <tr><th><input type="checkbox" name="Campingkit" value="Camping Kit">Camping Kit</th>
             <td><div style="padding-left: 40px;"> $30.00/day</div></td></tr><br/><br/>
 
-        <tr><th ><input type="checkbox" name="ChildSeats" >Child Seats</th>
+        <tr><th ><input type="checkbox" name="ChildSeats" (click)="ok($event)" value="Child Seats">Child Seats</th>
             <td><div style="padding-left: 40px;"> $2.00/day (For additional seat. 1 seat free)</div></td></tr><br/><br/> 
     </table>
     </div>

@@ -6,10 +6,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-on.component.css']
 })
 export class AddOnComponent implements OnInit {
-
+  isChecked1: boolean = false;
+  isChecked2: boolean = false;
+  isChecked3: boolean = false;
   constructor() { }
 
   ngOnInit() {
   }
+ok(k)
+{
+this.isChecked3=!this.isChecked1;
+if(this.isChecked3==true)
+{
+  localStorage.setItem('item3',k.target.value);
+}
+else
+{
+  localStorage.removeItem('item');
+}
+  var x=k.target.value;
+console.log(x);
+
+}
+
 
 }

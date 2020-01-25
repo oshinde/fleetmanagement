@@ -10,6 +10,7 @@ import { VehicleSelectionComponent } from './vehicle-selection/vehicle-selection
 import { TestingComponent } from './testing/testing.component';
 import { HandoverComponent } from './handover/handover.component';
 import { BillingComponent } from './billing/billing.component';
+import { LoginPageComponent } from './login-page/login-page.component';
 
 
 const routes: Routes = [{path:'',component:HomepageComponent},
@@ -22,7 +23,8 @@ const routes: Routes = [{path:'',component:HomepageComponent},
 {path:'vehicleSelection',component:VehicleSelectionComponent},
 {path:'testing',component:TestingComponent},
 {path:'handOver',component:HandoverComponent},
-{path:'billing',component:BillingComponent}];
+{path:'billing',component:BillingComponent},
+{path:'loginUser',component:LoginPageComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

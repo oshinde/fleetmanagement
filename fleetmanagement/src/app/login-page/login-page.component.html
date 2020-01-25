@@ -1,1 +1,31 @@
-<p>login-page works!</p>
+<div class="col-md-5 center-block">
+  
+    <h4 style="color:#17a2b8;">Welcome back,</h4>
+   <br>
+    <form [formGroup]="this.login.Form" (ngSubmit)="onSubmit()">
+         
+         <div class="form-group" >
+           
+               <label for="Email">E-mail</label>
+             <input [ngClass]="{'is-invalid':submitted && formControls.Email.errors}" type="Email" class="form-control" formControlName="Email" >  
+             <small class="invalid-feedback" *ngIf="submitted && formControls.Email.errors">Email is required<br></small>  
+           
+           </div>
+         
+         <div class="form-group">
+           <label for="pass1">Enter Password</label>
+           <input [ngClass]="{'is-invalid':submitted && formControls.Password.errors}" type="Password" class="form-control" formControlName="Password" >               
+           <small class="invalid-feedback" *ngIf="submitted && formControls.Password.errors">Password is required<br></small>
+         
+         </div>
+         <div class="form-group" >
+             <div style="text-align: center">
+             <button type="submit" style="text-align:center;"  class="btn btn-outline-info">Sign in</button>
+         </div>
+         
+       </div>
+         <div class="form-group">
+             <a href="#" class="ForgetPwd" Style="color:#17a2b8;font-family:helvetica;">Forget Password?</a>
+         </div>
+     </form>
+ </div>
