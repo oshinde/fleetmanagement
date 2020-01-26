@@ -10,52 +10,46 @@
 
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-2">
-                <b>Car Class</b>
-                <br> sedan
-            </div>
-            <div class="col-4">
-                <b>Car Type</b>
-                <br> Honda City
-            </div>
-            <div class="col-6">
-                <b>Base Rate</b>
-                <br>
-                <div class="row">
-                    <div class="col-2">
-                        <b>Daily</b>
-                        <br>
-                        21.6
-                    </div>
-                    <div class="col-2"><b>Weekly</b>
-                        <br>
-                        78
-                    </div>
-                    <div class="col-2">
-                        <b>Monthly</b>
-                        <br>
-                        108
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-    </div>
-    <div style="padding-left: 350px;">
         <br>
-        <div class="row">
-            <div style="padding-right: 10px;">
-                <button type="button" class="btn btn-outline-primary"
-                    >Continue Booking</button>
+        <div *ngFor="let car of carCat" class="box" style="padding-left:30px">
+
+            <img src="{{car.imagepath}}" class="rounded-circle" width="400" height="200" alt="">
+            <br>
+            <b> <span style="color:#17a2b8;">select car </span></b>
+            <input type="radio" name="car" (click)="ok($event)" value="{{car.carcategoryname}}">
+            <div class="row">
+                <div class="col-2"><b>Car Class</b> <br>{{car.carcategoryname}}</div>
+                
+                <div class="col-6">
+                    <b>Base Fares</b>
+                    <table>
+                        <col width="50">
+                        <col width="50">
+                        <col width="50">
+                        <tr>
+                            <th><b>Daily</b></th>
+                            <th><b>Weekly</b></th>
+                            <th><b>Monthly</b></th>
+                        </tr>
+                        <tr>
+                            <td>{{car.dailyrate}}</td>
+                            <td>{{car.weeklyrate}}</td>
+                            <td>{{car.monthlyrate}}</td>
+                        </tr>
+                    </table>
+                    
+                    
+                </div>
+                 <hr>
             </div>
-            <div style="padding-left: 10px;">
-                <button type="button" class="btn btn-outline-primary"
-                    >Cancel</button>
-            </div>
+            <br><hr>
+        </div>
+        <div align="center" style="padding-bottom:30px">
+           <a href="/addOn"> <button type="button" class="btn btn-outline-primary" >Continue</button></a>
         </div>
     </div>
+
+
 </body>
 
 </html>

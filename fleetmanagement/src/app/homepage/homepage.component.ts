@@ -73,7 +73,7 @@ setValues()
     localStorage.setItem('returnLocation',this.returnDay);
   }
   
-  this.router.navigate(['confirmPage/301']);
+  this.router.navigate(['vehicleSelection']);
 
 }
 hello()

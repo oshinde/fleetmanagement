@@ -39,6 +39,7 @@ export class HeaderComponent implements OnInit {
     }
     else{
       localStorage.setItem("_islogedin_","0");
+      localStorage.removeItem("userID");
       this.isLogin = false;
     }
   }

@@ -15,7 +15,7 @@ export class CustomerInformationComponent implements OnInit {
   user:IloginUser;
   usr:IRegisteruser;
   success: void;
-
+  myUser:IRegisteruser;
  
 
   constructor(public login:LoginUserService,public router:Router) {}
@@ -69,18 +69,26 @@ getUserDetails()
     //this.login.Login(this.user).then(function(data){console.log(data);});
  
     
-    this.login.Login(this.user).then(function(data){
-      if(data == true)
-      {
-        localStorage.setItem("_islogedin_","1");
-      _me.login.setLoginEvent("1");
-
-      this.getUserDetails();
-        
-      }
-      else{
+    this.login.Login(this.user).subscribe(
+      data =>{
+        this.myUser = data;
+     
+       if(this.myUser==null)
+       {
         console.log("login failed");
-      }
+        
+       } 
+        else if((this.user.useremailid==this.myUser.useremailid) && (this.user.userpassword==this.myUser.userpassword))
+        {
+          localStorage.setItem("_islogedin_","1");
+          localStorage.setItem("userID",this.myUser.userid);
+       _me.login.setLoginEvent("1");
+       _me.router.navigate(['homePage']);
+          
+        }
+       
+        
+      } );
       // if(data != null && data != 0)
       // {
         // localStorage.setItem("_islogedin_","1");
@@ -92,9 +100,7 @@ getUserDetails()
       //   console.log("login failed");
       // }
       
-    },function(error){
-      console.log(error);
-    })
+  
    // this.checkUser()
   }
 }

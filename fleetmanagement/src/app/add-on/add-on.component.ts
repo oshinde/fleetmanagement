@@ -15,14 +15,7 @@ export class AddOnComponent implements OnInit {
   ngOnInit() {
   }
 
-onClick()
-{
-  var x=localStorage.getItem('item1');
-  var y=localStorage.getItem('item2');
-  var z=localStorage.getItem('item3');
-  console.log(x+" "+y+ " "+z);
-  
-}
+
 
   ok1(k)
   {

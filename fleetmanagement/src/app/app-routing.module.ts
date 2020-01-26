@@ -17,7 +17,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
 const routes: Routes = [{path:'',component:HomepageComponent},
 {path:'customerInformation',component:CustomerInformationComponent},
 {path:'homePage',component:HomepageComponent},
-{path:'confirmPage/:code',component:ConfirmPageComponent},
+{path:'confirmPage',component:ConfirmPageComponent},
 {path:'addOn',component:AddOnComponent},
 {path:'selectLocation',component:SelectLocationComponent},
 {path:'membershipRegistration',component:MembershipRegistrationComponent},

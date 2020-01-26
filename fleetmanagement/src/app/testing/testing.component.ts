@@ -16,9 +16,7 @@ export class TestingComponent implements OnInit {
     private router:Router) { }
 
   ngOnInit() {
-    let reguser:string=this._userCode.snapshot.params['code'];
-    let code1:number=parseInt(reguser);
-    this._userserv.getBill(code1).subscribe(data=>this.users=data);
+   
     
   }
   

@@ -13,8 +13,8 @@ export class ConfirmPageComponent implements OnInit {
   returnLocation=localStorage.getItem('returnLocation');
   item1=localStorage.getItem('item1');
   item2=localStorage.getItem('item2');
-  item3=localStorage.getItem('item3');;
-
+  item3=localStorage.getItem('item3');
+carCat=localStorage.getItem('carCategory');
   
   constructor(private _userserv:RegisteruserdataService,private _userCode: ActivatedRoute,
     private router:Router) { }
@@ -22,7 +22,7 @@ export class ConfirmPageComponent implements OnInit {
    
   ngOnInit() {
     let reguser:string=this._userCode.snapshot.params['code'];
-    let code1:number=parseInt(reguser);
+    let code1:number=parseInt(localStorage.getItem("userID"));
     this._userserv.getUsers(code1).subscribe(data=>this.users=data);
   }
 

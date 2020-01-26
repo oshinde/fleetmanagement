@@ -23,12 +23,12 @@ export class LoginUserService {
     this.loginEvent.next(val);
   }
   
-  Login(user : IloginUser):Promise<any>
+  Login(user : IloginUser):Observable<IRegisteruser>
   {
     console.log(user);
     
        //  return  this.http.post<IRegisteruser>(this.Url+'Login/validate',user);  
-         return  this.http.post<any>(this.Url+'Login/validate',user).toPromise();        
+         return  this.http.post<IRegisteruser>(this.Url+'Login/validate',user);        
   }
   // getLogin():Observable<any>
   // {

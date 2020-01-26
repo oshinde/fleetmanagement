@@ -9,7 +9,7 @@
       <div class="form-group">
 
         <label for="Email">E-mail</label>
-        <input [ngClass]="{'is-invalid':submitted && formControls.Email.errors}" type="Email" class="form-control"
+        <input [ngClass]="{'is-invalid':submitted && formControls.Email.errors}" name="Email" type="Email" class="form-control"
           formControlName="Email">
         <small class="invalid-feedback" *ngIf="submitted && formControls.Email.errors">Email is required<br></small>
 
@@ -17,7 +17,7 @@
 
       <div class="form-group">
         <label for="pass1">Enter Password</label>
-        <input [ngClass]="{'is-invalid':submitted && formControls.Password.errors}" type="Password" class="form-control"
+        <input [ngClass]="{'is-invalid':submitted && formControls.Password.errors}" name="Password" type="Password" class="form-control"
           formControlName="Password">
         <small class="invalid-feedback" *ngIf="submitted && formControls.Password.errors">Password is
           required<br></small>

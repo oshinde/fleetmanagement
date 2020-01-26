@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { VehicleService } from '../Services/vehicle.service';
 
 @Component({
   selector: 'app-vehicle-selection',
@@ -7,15 +8,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VehicleSelectionComponent implements OnInit {
 
-  constructor() { }
+  carCat=[];
+  constructor(public vehicle:VehicleService) { }
   
 
   
   ngOnInit() {
 
-  
+    this.vehicle.getCars().subscribe(data => {this.carCat = data
+    console.log(this.carCat);
+    
+    });
 
   }
+  ok(k)
+  {
+  
+  
+  if(k.target.checked)
+  {
+    localStorage.setItem('carCategory',k.target.value);
+  }
 
+    var x=k.target.value;
+  console.log(x);
+  
+  }
   
 }
