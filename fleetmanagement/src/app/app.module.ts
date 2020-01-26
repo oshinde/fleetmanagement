@@ -21,6 +21,7 @@ import { VehicleSelectionComponent } from './vehicle-selection/vehicle-selection
 import { TestingComponent } from './testing/testing.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { HandoverComponent } from './handover/handover.component';
+import { ReturnComponent } from './return/return.component';
 
 
 
@@ -40,6 +41,7 @@ import { HandoverComponent } from './handover/handover.component';
      TestingComponent,
      LoginPageComponent,
      HandoverComponent,
+     ReturnComponent,
   ],
   imports: [
     BrowserModule,

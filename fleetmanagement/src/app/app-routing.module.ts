@@ -11,6 +11,7 @@ import { TestingComponent } from './testing/testing.component';
 import { HandoverComponent } from './handover/handover.component';
 
 import { LoginPageComponent } from './login-page/login-page.component';
+import { ReturnComponent } from './return/return.component';
 
 
 
@@ -25,7 +26,7 @@ const routes: Routes = [{path:'',component:HomepageComponent},
 {path:'testing',component:TestingComponent},
 {path:'userLogin',component:LoginPageComponent},
 {path:'testing/:code',component:TestingComponent},
-{path:'handOver',component:HandoverComponent}];
+{path:'handOver',component:HandoverComponent},{path:'return',component:ReturnComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
