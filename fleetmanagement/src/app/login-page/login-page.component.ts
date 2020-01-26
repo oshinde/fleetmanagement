@@ -61,7 +61,7 @@ export class LoginPageComponent implements OnInit {
     //this.login.Login(this.user).then(function(data){console.log(data);});
  
     
-    this.login.Login(this.user).then(function(data){
+     this.login.Login(this.user).then(function(data){
       if(data == true)
       {
         localStorage.setItem("_islogedin_","1");
