@@ -16,8 +16,9 @@ export class HandoverComponent implements OnInit {
   userid:any;
   constructor(private _userserv:BillingService,private _userCode: ActivatedRoute,
     private router:Router) { }
-
-
+    rent=localStorage.getItem('rentLocation');
+    return=localStorage.getItem('returnLocation');
+    car=localStorage.getItem('carCategory');
   
   billid:number;
   ngOnInit() {
