@@ -7,33 +7,56 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>AddOn Page</title>
 </head>
+
 <body>
-<div align="center">
-   
-    <h4 style="color:#17a2b8;"><u> Rental Add-ons </u></h4><br/>
-    <div class="container">
-        <table>
-       <tr ><th > <input type="checkbox" name="Gps" (click)="ok1($event)" value="GPS Navigation System">GPS Navigation System</th>
-            <td > <div style="padding-left: 40px;">$10.00/day</div></td></tr><br/><br/>
+    <div class="bcimage">
+<br>
+        <div align="center" class="box" style="margin-left:200px ;margin-right: 200px;">
 
-       <tr><th><input type="checkbox" name="Campingkit" (click)="ok2($event)" value="Camping Kit">Camping Kit</th>
-            <td><div style="padding-left: 40px;"> $30.00/day</div></td></tr><br/><br/>
+            <h4 style="color:#17a2b8;"><u> Rental Add-ons </u></h4><br />
+            <div class="container">
+                <table>
+                    <tr>
+                        <th> <input type="checkbox" name="Gps" (click)="ok1($event)" value="GPS Navigation System">GPS
+                            Navigation System</th>
+                        <td>
+                            <div style="padding-left: 40px;">$10.00/day</div>
+                        </td>
+                    </tr><br /><br />
 
-        <tr><th ><input type="checkbox" name="ChildSeats" (click)="ok3($event)" value="Child Seats">Child Seats</th>
-            <td><div style="padding-left: 40px;"> $2.00/day (For additional seat. 1 seat free)</div></td></tr><br/><br/> 
-    </table>
-    </div>
-    <div style="padding-left: 500px;">
-        <br>
-        <div class="row">
-            <div style="padding-right: 10px;">
-                <button type="button" class="btn btn-outline-primary" (click)="onClick()">Continue Booking</button>
+                    <tr>
+                        <th><input type="checkbox" name="Campingkit" (click)="ok2($event)" value="Camping Kit">Camping
+                            Kit</th>
+                        <td>
+                            <div style="padding-left: 40px;"> $30.00/day</div>
+                        </td>
+                    </tr><br /><br />
+
+                    <tr>
+                        <th><input type="checkbox" name="ChildSeats" (click)="ok3($event)" value="Child Seats">Child
+                            Seats</th>
+                        <td>
+                            <div style="padding-left: 40px;"> $2.00/day (For additional seat. 1 seat free)</div>
+                        </td>
+                    </tr><br /><br />
+                </table>
             </div>
-            <div style="padding-left: 10px;">
-                <button type="button" class="btn btn-outline-primary">Cancel</button>
+            <div style="padding-left: 500px;">
+                <br>
+                <div class="row">
+                    <div style="padding-right: 10px;">
+                        <button type="button" class="btn btn-outline-primary" (click)="onClick()">Continue
+                            Booking</button>
+                    </div>
+                    <div style="padding-left: 10px;">
+                        <button type="button" class="btn btn-outline-primary">Cancel</button>
+                    </div>
+                </div>
             </div>
+            <br>
         </div>
+        <br>
     </div>
-</div>
 </body>
+
 </html>

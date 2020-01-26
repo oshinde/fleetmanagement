@@ -9,18 +9,21 @@
 </head>
 
 <body>
-    <br><br>
+    <div class="bcimage1">
+    
+
     <div class="container">
         <form>
+            <br><br>
             <div class="row">
-                <div class="col-md-4 center-block">
+                <div class="col-4 center-block box" style="margin-bottom: 500px;">
   
                     
                    <br>
                     <form [formGroup]="this.login.Form" (ngSubmit)="loginUser()">
                          
                          <div class="form-group" >
-                           
+                            <h5 style="color:#17a2b8;">Log In</h5>
                                <label for="Email">E-mail</label>
                              <input [ngClass]="{'is-invalid':submitted && formControls.Email.errors}" type="Email" class="form-control" formControlName="Email" >  
                              <small class="invalid-feedback" *ngIf="submitted && formControls.Email.errors">Email is required<br></small>  
@@ -44,7 +47,8 @@
                          </div>
                      </form>
                  </div>
-                <div style="padding-left: 60px;" class="col-8">
+                <div style="margin-left:10px;margin-bottom: 160px;" class="col-7 box">
+                    <br>
                     <div class="row">
                         <div class="col-3">
                             <p>Renter's Name</p>
@@ -127,7 +131,7 @@
                         <div class="col-6">
                             <button type="button" class="btn btn-outline-primary">Cancel</button>
                     </div>
-                    <br>
+                    
 
                     </div>
 
@@ -135,9 +139,12 @@
                 
                 </div>
             </div>
-            <br>
+            
         </form>
     </div>
+   
+</div>
 </body>
+
 
 </html>

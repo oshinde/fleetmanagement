@@ -7,91 +7,109 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HandOver Page</title>
 </head>
+
 <body>
     {{user|json}}
-    <div align="center">
-        
-    <h4 style="color:#17a2b8;"><u> HandOver</u></h4><br/>
-    </div>
-    <div [formGroup]="myGroup">
-        <div style="padding-left: 500px;">
-        <div class="row">
-            
-            <div style="padding-right: 10px;"  >
-                
-                <input type="text"  placeholder="Booking Id" id="bookingid"
-                 class="form-control" name="billsearch" formControlName="search1">
-                
-            </div>
-            <div style="padding-left: 10px;">
-                
-                <input type="submit"  (click)="onSubmit();isChecked =! isChecked"class="btn btn-outline-primary" 
-                    value="Search" ><br><br>
-            </div> 
+    <div class="bcimage">
+        <div style="padding-left: 40px;">
+            <h4 style="color:#17a2b8;"><u> HandOver</u></h4><br />
 
-            <div *ngIf="isChecked" class="container">
-                <h4 style="color:#17a2b8;"><u>Billing</u></h4>
-                
-                <div class="row">
-                    
-                    <div class="col-2">
-                        <br>
-                        User Id
-                        <input type="text" name="fuserid" formControlName="fuserid" class="form-control" value="{{users.registeruser.userid}}">  
-                    </div>  
-                    <div class="col-3">  
-                        <br>
-                        First Name
-                        <input type="text" name="fname"  formControlName="ffname" class="form-control" value="{{users.registeruser.userfirstname}}">  
-                    </div>
-                    <div class="col-3">
-                        <br>
-                        Last Name
-                        <input type="text" name="lname"  formControlName="flname" class="form-control" value="{{users.registeruser.userlastname}}">
-                    </div>
-                </div> 
-                <div class="row">
-                    <div class="col-4">
-                        <br>
-                        Address
-                        <input type="text"  formControlName="faddr" class="form-control" value="{{users.registeruser.useraddress1}}">
-                        <br>
-                        Aadhar No.
-                        <input type="text"  formControlName="faadhar" class="form-control" value="{{users.registeruser.useraadharno}}">
-                        <br>
-                        Phone No.
-                        <input type="text"  formControlName="phoneno" class="form-control" value="{{users.registeruser.userphoneno}}">           
-                    </div>
-                    <div class="col-4"> 
-                        <br>
-                        Vehicle type
-                        <input type="text"  formControlName="fvehicle" class="form-control">
-                        <br>
-                        pickup Hub
-                        <input type="text"  formControlName="fphub" class="form-control">
-                        <br>
-                        Drop Hub
-                        <input type="text" formControlName="fdhub" class="form-control">
-                    </div>
-                
-                </div>
-    
-                <div style="padding-left: 250px;">
-                    <br>
+            <div [formGroup]="myGroup">
+                <div>
                     <div class="row">
-                        <div style="padding-right: 10px;">
-                            <button type="submit" class="btn btn-outline-primary"
-                                style="padding:0px 80px 0px 80px">Confirm</button>
+                        <div class="col-4">
+                            <div class="row">
+                                <div style="padding-right: 10px;">
+
+                                    <input type="text" placeholder="Booking Id" id="bookingid" class="form-control"
+                                        name="billsearch" formControlName="search1">
+
+                                </div>
+                                <div style="padding-left: 10px;">
+
+                                    <input type="submit" (click)="onSubmit();isChecked =! isChecked"
+                                        class="btn btn-outline-primary" value="Search"><br><br>
+                                </div>
+                            </div>
                         </div>
-                        <br>
-                        
+                        <div class="col-8">
+                            <div *ngIf="isChecked">
+                                <div class="box" style="padding-left:20px;margin-right:200px;">
+                                    <h4 style="color:#17a2b8;"><u>Billing</u></h4>
+
+                                    <div class="row">
+
+                                        <div class="col-2">
+                                            <br>
+                                            User Id
+                                            <input type="text" name="fuserid" formControlName="fuserid"
+                                                class="form-control" value="{{users.registeruser.userid}}">
+                                        </div>
+                                        <div class="col-3">
+                                            <br>
+                                            First Name
+                                            <input type="text" name="fname" formControlName="ffname"
+                                                class="form-control" value="{{users.registeruser.userfirstname}}">
+                                        </div>
+                                        <div class="col-3">
+                                            <br>
+                                            Last Name
+                                            <input type="text" name="lname" formControlName="flname"
+                                                class="form-control" value="{{users.registeruser.userlastname}}">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <br>
+                                            Address
+                                            <input type="text" formControlName="faddr" class="form-control"
+                                                value="{{users.registeruser.useraddress1}}">
+                                            <br>
+                                            Aadhar No.
+                                            <input type="text" formControlName="faadhar" class="form-control"
+                                                value="{{users.registeruser.useraadharno}}">
+                                            <br>
+                                            Phone No.
+                                            <input type="text" formControlName="phoneno" class="form-control"
+                                                value="{{users.registeruser.userphoneno}}">
+                                        </div>
+                                        <div class="col-4">
+                                            <br>
+                                            Vehicle type
+                                            <input type="text" formControlName="fvehicle" class="form-control">
+                                            <br>
+                                            pickup Hub
+                                            <input type="text" formControlName="fphub" class="form-control">
+                                            <br>
+                                            Drop Hub
+                                            <input type="text" formControlName="fdhub" class="form-control">
+                                        </div>
+
+                                    </div>
+
+                                    <div style="padding-left: 100px;">
+                                        <br>
+                                        <div class="row">
+                                            <div style="padding-right: 10px;">
+                                                <button type="submit" class="btn btn-outline-primary"
+                                                    style="padding:0px 80px 0px 80px">Confirm</button>
+                                            </div>
+                                            <br>
+
+                                        </div>
+                                    </div>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+
+
                     </div>
                 </div>
             </div>
-            
         </div>
-        </div>
+        <br><br>
     </div>
-
 </body>
+
 </html>
