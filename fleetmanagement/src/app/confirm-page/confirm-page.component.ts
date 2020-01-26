@@ -11,6 +11,11 @@ export class ConfirmPageComponent implements OnInit {
   users:IRegisteruser;
  rentLocation=localStorage.getItem('rentLocation');
   returnLocation=localStorage.getItem('returnLocation');
+  item1=localStorage.getItem('item1');
+  item2=localStorage.getItem('item2');
+  item3=localStorage.getItem('item3');;
+
+  
   constructor(private _userserv:RegisteruserdataService,private _userCode: ActivatedRoute,
     private router:Router) { }
    
@@ -19,8 +24,6 @@ export class ConfirmPageComponent implements OnInit {
     let reguser:string=this._userCode.snapshot.params['code'];
     let code1:number=parseInt(reguser);
     this._userserv.getUsers(code1).subscribe(data=>this.users=data);
-    
-    
   }
 
 }

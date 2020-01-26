@@ -52,7 +52,10 @@
                 <value>fleet.Booking</value>
                 <value>fleet.Employee</value>
                 <value>fleet.Registeruser</value>
+<<<<<<< HEAD
                 <value>fleet.Login</value>
+=======
+>>>>>>> f8ac4a9ddac7c1c1b6afb3c18bfc1204a9db2449
                  
              </list>
         </property>

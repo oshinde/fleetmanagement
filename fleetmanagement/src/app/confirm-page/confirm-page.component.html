@@ -10,19 +10,22 @@
 
 <body>
     <form>
+        
         <div class="container">
+            <br>
+            <h4 style="color:#17a2b8;"><u>Confirm Booking</u></h4>
             <div class="row">
                 <div class="col-6">
 
                     <br>
                     <div class="row">
-
+<!-- 
                         <div class="col-4">
                             Pickup-up <input type="text" placeholder="Select Date" class="form-control" bsDatepicker>
                         </div>
                         <div class="col-2" style="padding-bottom:8px;">
                             <timepicker [(ngModel)]="rental" name="Rental"></timepicker>
-                        </div>
+                        </div> -->
                     </div>
                     Pickup-up at: <p><b>{{rentLocation}}</b></p> <br>
                     Vehicle Type: <b>Sedan</b>
@@ -33,15 +36,19 @@
                     <br>
                     <div class="row">
 
-                        <div class="col-4">
+                        <!-- <div class="col-4">
                             Return <input type="text" placeholder="Select Date" class="form-control" bsDatepicker>
                         </div>
                         <div class="col-2" style="padding-bottom:8px;">
                             <timepicker [(ngModel)]="rental" name="Rental"></timepicker>
-                        </div>
+                        </div> -->
                     </div>
                     Return at: <p><b>{{returnLocation}}</b></p><br>
-                    Rental Add-on: <b>Some Addons</b>
+                    Rental Add-on: 
+                    
+                    <p>
+                       <b>{{item1}}</b> <span> &nbsp;</span><b>{{item2}}</b> <span>&nbsp; </span>&nbsp; <b>{{item3}}</b> 
+                    </p>
 
                 </div>
             </div>

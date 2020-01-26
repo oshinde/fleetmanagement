@@ -12,7 +12,7 @@ import com.google.gson.Gson;
 import fleet.Amenity;
 
 @RestController
-@CrossOrigin(origins="*")
+@CrossOrigin("http://localhost:4200")
 public class AmenityController 
 {
 	@Autowired

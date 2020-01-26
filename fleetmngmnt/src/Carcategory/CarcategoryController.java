@@ -17,7 +17,7 @@ import fleet.Carcategory;
 
 
 @RestController  
-@CrossOrigin(origins="*")
+@CrossOrigin("http://localhost:4200")
 public class CarcategoryController
 {
 	@Autowired
