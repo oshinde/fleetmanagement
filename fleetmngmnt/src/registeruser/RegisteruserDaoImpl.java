@@ -1,11 +1,15 @@
-package registeruser;
-import fleet.Registeruser;
+package Registeruser;
+
+import java.util.Iterator;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
+
+import fleet.Login;
+import fleet.Registeruser;
 
 @Repository
 @Transactional
@@ -52,4 +56,33 @@ public class RegisteruserDaoImpl implements RegisteruserDao
 		return temp;
 	}
 
+	@Override
+	public boolean validate(Login l) {
+		//List<Login> list=(List<Login>) template.find("from Registeruser r where r.useremailid.equals(l.useremailid)=? and r.userpassword.equals(l.userpassword)=?",l.getUseremailid(),l.getUserpassword()).get(0);
+		@SuppressWarnings("unchecked")
+		List<Registeruser> list=(List<Registeruser>) template.find("from Registeruser r");
+		Iterator<Registeruser>itr=list.iterator();
+		int flag=1;
+		while(itr.hasNext())
+		{
+			Registeruser ref=itr.next();
+			if(ref.getUseremailid().equalsIgnoreCase(l.getUseremailid())&& ref.getUserpassword().equals(l.getUserpassword()))
+					{
+						flag=2;
+						break;
+					}
+			else
+			{
+				flag=1;
+			}
+		}
+		if(flag==1)
+		{
+			return false;
+		}
+		else
+		{
+			return true;
+		}
+	}
 }

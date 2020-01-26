@@ -12,17 +12,9 @@
 	 http://www.springframework.org/schema/mvc/spring-mvc.xsd 
 	 http://www.springframework.org/schema/tx
 	http://www.springframework.org/schema/tx/spring-tx.xsd">
-<context:component-scan base-package="fleet"/>
-<context:component-scan base-package="City"/>
-<context:component-scan base-package="State"/>
-<context:component-scan base-package="Hub"/>
-<context:component-scan base-package="registeruser"/>
-<context:component-scan base-package="Amenity"/>
-<context:component-scan base-package="Billing"/>
-<context:component-scan base-package="Booking"/>
-<context:component-scan base-package="Car"/>
-<context:component-scan base-package="Carcategory"/>
-<context:component-scan base-package="Employee"/>
+<context:component-scan base-package="fleet,City,State,Hub,Carcategory,Car,Amenity,Billing,Booking,Registeruser,Employee"/>
+
+
 <tx:annotation-driven transaction-manager="transactionManager"/>
 <mvc:annotation-driven/>
  <bean id="dataSource"
@@ -51,15 +43,16 @@
         <property name="annotatedClasses">
             <list>
                 <value>fleet.City</value>
-                 <value>fleet.State</value>
-                 <value>fleet.Hub</value>
-                 <value>fleet.Amenity</value>
-                 <value>fleet.Billing</value>
-                 <value>fleet.Booking</value>
-                 <value>fleet.Car</value>
-                 <value>fleet.Carcategory</value>
-                 <value>fleet.Employee</value>
-                 <value>fleet.Registeruser</value>
+                <value>fleet.State</value>
+                <value>fleet.Hub</value>
+                <value>fleet.Carcategory</value>
+                <value>fleet.Car</value>
+                <value>fleet.Amenity</value>
+                <value>fleet.Billing</value>
+                <value>fleet.Booking</value>
+                <value>fleet.Employee</value>
+                <value>fleet.Registeruser</value>
+                <value>fleet.Login</value>
                  
              </list>
         </property>

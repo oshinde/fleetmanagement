@@ -21,12 +21,12 @@ public class StateController
 		return new Gson().toJson(manager.getState());
 	}
 	
-	@GetMapping(value = "crud/search/{sid}", headers = "Accept=application/json")  
+/*	@GetMapping(value = "crud/search/{sid}", headers = "Accept=application/json")  
 	 public State getPro(@PathVariable int sid)
 	 {
 		State p=manager.getState(sid);
 		return p;
-	 }
+	 }*/
 	
 	@PostMapping(value = "crud/stateadd", headers = "Accept=application/json")  
 	 public void addpro(@RequestBody State state)

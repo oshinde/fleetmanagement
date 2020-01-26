@@ -21,10 +21,6 @@ import javax.persistence.Transient;
 @Table(name = "carcategory", catalog = "fleet_management")
 public class Carcategory implements java.io.Serializable {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 	private int carcategoriesid;
 	private Hub hub;
 	private String imagepath;
@@ -65,12 +61,12 @@ public class Carcategory implements java.io.Serializable {
 		this.carcategoriesid = carcategoriesid;
 	}
 
-	@Transient
+	/*@Transient
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "hubid", nullable = false)
 	public Hub getHub() {
 		return this.hub;
-	}
+	}*/
 
 	public void setHub(Hub hub) {
 		this.hub = hub;
@@ -121,8 +117,9 @@ public class Carcategory implements java.io.Serializable {
 		this.monthlyrate = monthlyrate;
 	}
 
-	@Transient
-	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "carcategory")
+	//@Transient
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER/*, mappedBy = "carcategory"*/)
+	@JoinColumn(name = "carcategorycategoryid", referencedColumnName="carcategoriesid")
 	public Set<Car> getCars() {
 		return this.cars;
 	}

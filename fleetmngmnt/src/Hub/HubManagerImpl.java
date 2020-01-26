@@ -38,11 +38,11 @@ public class HubManagerImpl implements HubManager
 		
 	}*/
 
-	@Override
+	/*@Override
 	public Hub getHub(int id) {
 		// TODO Auto-generated method stub
 		return dao.getHub(id);
-	}
+	}*/
 	
 	
 

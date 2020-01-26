@@ -3,6 +3,7 @@ package City;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.HibernateTemplate;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -18,7 +19,6 @@ public class CityDAOImpl implements CityDAO
 	@Override
 	public List<City> getCities()
 	{
-		@SuppressWarnings("unchecked")
 		List<City>mylist=(List<City>) template.find("from City c");
 		return mylist;
 	}
@@ -39,12 +39,12 @@ public class CityDAOImpl implements CityDAO
 
 
 
-	@Override
+	/*@Override
 	public City getCity(int id)
 	{
 		City temp=(City)template.find("from City c where c.id=?",id).get(0);
 		return temp;
-	}
+	}*/
 	@Override
 	public void addCity(City c) {
 		template.save(c);

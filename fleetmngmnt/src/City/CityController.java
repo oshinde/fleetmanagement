@@ -24,15 +24,16 @@ public class CityController
 	@GetMapping(value = "crud/cities",headers = "Accept=application/json")  
 	 public String showCity()
 	 {
+		System.out.println("inside showCity");
 		  return new Gson().toJson(manager.getCities());
 	 }
       
-         @GetMapping(value = "crud/search/{cid}", headers = "Accept=application/json")  
+        /* @GetMapping(value = "crud/search/{cid}", headers = "Accept=application/json")  
 	 public City getCity(@PathVariable int cid)
 	 {
 		City c=manager.getCity(cid);
 		return c;
-	 }
+	 }*/
 
 
 	

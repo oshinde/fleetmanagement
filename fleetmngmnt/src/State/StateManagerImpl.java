@@ -31,11 +31,11 @@ public class StateManagerImpl implements StateManager
 
 	
 
-	@Override
+	/*@Override
 	public State getState(int id) 
 	{
 		
 		return dao.getState(id);
-	}
+	}*/
 	
 }

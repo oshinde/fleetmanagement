@@ -1,9 +1,12 @@
-package registeruser;
-import fleet.Registeruser;
+package Registeruser;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import fleet.Login;
+import fleet.Registeruser;
 
 @Service
 public class RegisteruserManagerImpl implements RegisteruserManager 
@@ -43,7 +46,12 @@ public class RegisteruserManagerImpl implements RegisteruserManager
 		return dao.getCustomers();
 	}
 	
-	
+	@Override
+	public boolean validate(Login l) {
+		// TODO Auto-generated method stub
+	return dao.validate(l);
+		// return list;
+	}
 	
 
 }

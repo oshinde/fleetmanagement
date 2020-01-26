@@ -23,7 +23,16 @@ export class HandoverComponent implements OnInit {
   ngOnInit() {
     this.myGroup = new FormGroup({
       search1: new FormControl(),
-      fname:new FormControl(),
+      fuserid:new FormControl(),
+      ffname:new FormControl(),
+      flname:new FormControl(),
+      faddr:new FormControl(),
+      faadhar:new FormControl(),
+      phoneno:new FormControl(),
+      fvehicle:new FormControl(),
+      fphub:new FormControl(),
+      fdhub:new FormControl(),
+
       });
       
     

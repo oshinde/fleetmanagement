@@ -17,10 +17,6 @@ import javax.persistence.Transient;
 @Table(name = "car", catalog = "fleet_management")
 public class Car implements java.io.Serializable {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 	private int carid;
 	private Hub hub;
 	private Carcategory carcategory;
@@ -64,12 +60,12 @@ public class Car implements java.io.Serializable {
 		this.carid = carid;
 	}
 
-	@Transient
+	/*@Transient
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "hubhubid", nullable = false)
 	public Hub getHub() {
 		return this.hub;
-	}
+	}*/
 
 	public void setHub(Hub hub) {
 		this.hub = hub;

@@ -10,5 +10,5 @@ public interface HubManager
 	List<Hub> getHubs();
 	void delete(int id);
 	/*void update(Hub hub,int id);*/
-	Hub getHub(int id);
+	//Hub getHub(int id);
 }

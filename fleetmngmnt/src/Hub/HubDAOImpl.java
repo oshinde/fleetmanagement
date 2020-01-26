@@ -3,6 +3,7 @@ package Hub;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.HibernateTemplate;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -18,7 +19,6 @@ public class HubDAOImpl implements HubDAO
 	@Override
 	public List<Hub> getHubs()
 	{
-		@SuppressWarnings("unchecked")
 		List<Hub>mylist=(List<Hub>) template.find("from Hub h");
 		return mylist;
 	}
@@ -39,12 +39,12 @@ public class HubDAOImpl implements HubDAO
 
 
 
-	@Override
+	/*@Override
 	public Hub getHub(int id)
 	{
 		Hub temp=(Hub)template.find("from Hub h where h.id=?",id).get(0);
 		return temp;
-	}
+	}*/
 	@Override
 	public void addHub(Hub h) {
 		template.save(h);

@@ -38,11 +38,11 @@ public class CityManagerImpl implements CityManager
 		
 	}
 
-	@Override
+	/*@Override
 	public City getCity(int id) {
 		// TODO Auto-generated method stub
 		return dao.getCity(id);
-	}
+	}*/
 	
 	
 

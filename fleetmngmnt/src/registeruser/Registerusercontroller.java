@@ -1,5 +1,6 @@
-package registeruser;
-import fleet.Registeruser;
+package Registeruser;
+
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -13,6 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.google.gson.Gson;
 
+import fleet.Login;
+import fleet.Registeruser;
+
 @RestController
 @CrossOrigin(origins="*")
 
@@ -21,7 +25,7 @@ public class Registerusercontroller
 	@Autowired
 	RegisteruserManager manager;
 	
-	@GetMapping(value = "fleet/usersearch",headers = "Accept=application/json")  
+	@GetMapping(value = "fleet/search",headers = "Accept=application/json")  
 	 public String showusers()
 	 {
 		  return new Gson().toJson(manager.getCustomers());
@@ -52,4 +56,22 @@ public class Registerusercontroller
 		System.out.println("customer called");
 		manager.addCustomer(customer);
 	 }
+	
+	@PostMapping(value = "Login/validate", headers = "Accept=application/json")
+	
+	public boolean usercheck(@RequestBody Login l)
+	{
+	 return manager.validate(l);
+/*	 Login obj=null;
+	 if(!list.isEmpty())
+	 {
+		 obj=list.get(0);
+	 }
+	 else
+		 System.out.println("object is null");
+	 
+	 return obj;
+	
+	*/
+	}
 }

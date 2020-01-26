@@ -1,6 +1,9 @@
-package registeruser;
-import fleet.Registeruser;
+package Registeruser;
+
 import java.util.List;
+
+import fleet.Login;
+import fleet.Registeruser;
 
 public interface RegisteruserDao 
 {
@@ -10,5 +13,6 @@ public interface RegisteruserDao
 	void delete(int id);
 	void update(Registeruser customer,int id);
 	Registeruser getCustomer(int id);
+	public boolean validate(Login l);
 
 }

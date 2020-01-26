@@ -8,6 +8,7 @@
     <title>HandOver Page</title>
 </head>
 <body>
+    {{user|json}}
     <div align="center">
         
     <h4 style="color:#17a2b8;"><u> HandOver</u></h4><br/>
@@ -30,49 +31,49 @@
 
             <div *ngIf="isChecked" class="container">
                 <h4 style="color:#17a2b8;"><u>Billing</u></h4>
-                <div [formGroup]="myGroup">
+                
                 <div class="row">
                     
                     <div class="col-2">
                         <br>
                         User Id
-                        <input type="text" name="fname" class="form-control" value="{{users.registeruser.userid}}">  
+                        <input type="text" name="fuserid" formControlName="fuserid" class="form-control" value="{{users.registeruser.userid}}">  
                     </div>  
                     <div class="col-3">  
                         <br>
                         First Name
-                        <input type="text" name="fname"  class="form-control" value="{{users.registeruser.userfirstname}}">  
+                        <input type="text" name="fname"  formControlName="ffname" class="form-control" value="{{users.registeruser.userfirstname}}">  
                     </div>
                     <div class="col-3">
                         <br>
                         Last Name
-                        <input type="text" name="fname"  class="form-control" value="{{users.registeruser.userlastname}}">
+                        <input type="text" name="lname"  formControlName="flname" class="form-control" value="{{users.registeruser.userlastname}}">
                     </div>
                 </div> 
                 <div class="row">
                     <div class="col-4">
                         <br>
                         Address
-                        <input type="text"  class="form-control">
+                        <input type="text"  formControlName="faddr" class="form-control" value="{{users.registeruser.useraddress1}}">
                         <br>
                         Aadhar No.
-                        <input type="text"  class="form-control">
+                        <input type="text"  formControlName="faadhar" class="form-control" value="{{users.registeruser.useraadharno}}">
                         <br>
-                        Start date
-                        <input type="text" placeholder="DD/MM/YYYY"  class="form-control" bsDatepicker>              
+                        Phone No.
+                        <input type="text"  formControlName="phoneno" class="form-control" value="{{users.registeruser.userphoneno}}">           
                     </div>
                     <div class="col-4"> 
                         <br>
                         Vehicle type
-                        <input type="text"  class="form-control">
+                        <input type="text"  formControlName="fvehicle" class="form-control">
                         <br>
                         pickup Hub
-                        <input type="text"  class="form-control">
+                        <input type="text"  formControlName="fphub" class="form-control">
                         <br>
                         Drop Hub
-                        <input type="text" class="form-control">
+                        <input type="text" formControlName="fdhub" class="form-control">
                     </div>
-                </div>
+                
                 </div>
     
                 <div style="padding-left: 250px;">
@@ -82,6 +83,7 @@
                             <button type="submit" class="btn btn-outline-primary"
                                 style="padding:0px 80px 0px 80px">Confirm</button>
                         </div>
+                        <br>
                         
                     </div>
                 </div>

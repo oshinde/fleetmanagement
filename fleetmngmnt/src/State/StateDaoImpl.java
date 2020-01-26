@@ -4,6 +4,8 @@ import java.util.List;
 
 import javax.transaction.Transactional;
 
+import org.hibernate.Hibernate;
+import org.hibernate.sql.Template;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Repository;
@@ -36,11 +38,11 @@ public class StateDaoImpl implements StateDao
 
 	
 
-	@Override
+	/*@Override
 	public State getState(int id) 
 	{
 		
 		return null;
-	}
+	}*/
 
 }

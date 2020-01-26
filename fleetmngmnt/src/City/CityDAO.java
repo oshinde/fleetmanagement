@@ -10,5 +10,5 @@ public interface CityDAO
 	List<City> getCities();
 	void delete(int id);
 	void update(City product,int id);
-	City getCity(int id);
+	//City getCity(int id);
 }

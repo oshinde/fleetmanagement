@@ -10,5 +10,5 @@ public interface CityManager
 	List<City> getCities();
 	void delete(int id);
 	void update(City city,int id);
-	City getCity(int id);
+	//City getCity(int id);
 }
