@@ -28,6 +28,12 @@
                     India Drive</button></a>
             <a routerLink="/signin"><button style="margin-right:20px" type="button"
                     class="btn btn-outline-info">Customer Care</button></a>
+                    <a>
+                        <button *ngIf="isLogin" style="margin-right:20px" type="button"
+                        (click)="OnClick('logout')" class="btn btn-outline-info">Logout</button>
+                        <button *ngIf="!isLogin" style="margin-right:20px" type="button"
+                               (click)="OnClick('login')" class="btn btn-outline-info">Login</button>
+                            </a>
         </div>
     </div>
 </nav>

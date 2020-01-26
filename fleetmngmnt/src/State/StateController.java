@@ -9,7 +9,7 @@ import fleet.State;
 
 
 @RestController
-@CrossOrigin("http//localhost:4200")
+@CrossOrigin("*")
 public class StateController 
 {
 	@Autowired

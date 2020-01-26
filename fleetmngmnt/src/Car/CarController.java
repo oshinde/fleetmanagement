@@ -11,7 +11,7 @@ import com.google.gson.Gson;
 import fleet.Car;
 
 @RestController
-@CrossOrigin("http://localhost:4200")
+@CrossOrigin("*")
 public class CarController 
 {
 

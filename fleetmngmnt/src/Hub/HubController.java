@@ -16,7 +16,7 @@ import fleet.Hub;
 import Hub.HubManager;
 
 @RestController  
-@CrossOrigin("http://localhost:4200")
+@CrossOrigin("*")
 public class HubController
 {
 	@Autowired

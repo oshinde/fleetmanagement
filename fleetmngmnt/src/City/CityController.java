@@ -16,7 +16,7 @@ import fleet.City;
 import City.CityManager;
 
 @RestController  
-@CrossOrigin("http://localhost:4200")
+@CrossOrigin("*")
 public class CityController
 {
 	@Autowired
